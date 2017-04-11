@@ -18,12 +18,22 @@ class AppAsset extends AssetBundle
     public $sourcePath = '@app/views/src/app-asset';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'css/bootstrap-select.min.css',
+        'css/jquery.flipster.min.css',
+        'css/owlcarousel/owl.carousel.min.css',
+        'css/owlcarousel/owl.theme.default.css',
+        'css/fonts.css',
+        'css/main.css',
+        'css/media.css',
     ];
     public $js = [
+        'js/bootstrap-select.min.js',
+        'js/jquery.flipster.min.js',
+        'js/owl.carousel.min.js',
+        'js/custom.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapPluginAsset',
     ];
 }

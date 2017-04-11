@@ -1,9 +1,10 @@
 <?php
 
 return [
-    'id' => 'My site',
-    'name' => 'My site',
+    'id' => 'ARS',
+    'name' => 'ARS-Holding',
     'basePath' => dirname(__DIR__),
+    'language' => 'ru-RU',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'runtimePath' => dirname(dirname(__DIR__)) . '/runtime',
     'viewPath' => dirname(__DIR__) . '/views/pages',

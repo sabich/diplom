@@ -26,41 +26,24 @@ AppAsset::register($this);
 <body>
     <?php $this->beginBody() ?>
 
-    <div class="wrap">
-        <?php
-            NavBar::begin([
-                'brandLabel' => 'My Company',
-                'brandUrl' => Yii::$app->homeUrl,
-                'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
-                ],
-            ]);
+    <?= $this->render('/../chunks/header.php') ?>
 
-            echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => [
-                ],
-            ]);
+        <div class="container-fluid">
+            <div class="row">
 
-            NavBar::end();
-        ?>
+                <?= Breadcrumbs::widget([
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                ]) ?>
 
-        <div class="container">
-            <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-
-            <?= $content ?>
+                <?= $content ?>
+            </div>
         </div>
-    </div>
+    <?= $this->render('/../chunks/last-work.php') ?>
+    <?= $this->render('/../chunks/order.php') ?>
+    <?= $this->render('/../chunks/about-us.php') ?>
+    <?= $this->render('/../chunks/feedback.php') ?>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="pull-left">&copy; <?= Yii::$app->name ?> <?= date('Y') ?></p>
-
-            <p class="pull-right"><?= Yii::powered() ?></p>
-        </div>
-    </footer>
+    <?= $this->render('/../chunks/footer.php') ?>
 
     <?php $this->endBody() ?>
 </body>
