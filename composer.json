@@ -29,6 +29,12 @@
         "codeception/specify": "~0.4.3"
     },
     "config": {
+            "fxp-asset": {
+              "installer-paths": {
+                  "npm-asset-library": "vendor/npm",
+                  "bower-asset-library": "vendor/bower"
+                }
+              },
         "process-timeout": 1800
     },
     "scripts": {
@@ -48,10 +54,6 @@
             "generateCookieValidationKey": [
                 "config/web.php"
             ]
-        },
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
         }
     }
 }
