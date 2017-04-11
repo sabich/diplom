@@ -42,7 +42,6 @@ AppAsset::register($this);
     <?= $this->render('/../chunks/order.php') ?>
     <?= $this->render('/../chunks/about-us.php') ?>
     <?= $this->render('/../chunks/feedback.php') ?>
-
     <?= $this->render('/../chunks/footer.php') ?>
 
     <?php $this->endBody() ?>

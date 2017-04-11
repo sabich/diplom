@@ -13,7 +13,7 @@
         <section id="top-menu" class="container">
             <div id="header-wrap" class="row">
                 <div id="logo-top" class="col-md-1 col-xs-1">
-                    <a href="index.html">
+                    <a href="<?= Yii::$app->homeUrl ?>">
                         <img src="/images/logo/logo-min.png" alt="АРС-Холдинг">
                     </a>
                 </div>
