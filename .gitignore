@@ -29,5 +29,6 @@ phpunit.phar
 tests/_output/*
 tests/_support/_generated
 
-/assets
+/web/assets
 /runtime
+/documents
