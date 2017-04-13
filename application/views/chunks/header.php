@@ -5,6 +5,7 @@
  * Time: 23:10
  */
 
+use yii\bootstrap\Nav;
 ?>
 
 <!-- HEADER -->
@@ -33,6 +34,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <div id="nav-top" class="col-md-5">
+                        <?= Nav::widget([
+                            'options' => [
+                                'class' => 'navbar-nav'
+                            ],
+                            'items' => $this->params['main_menu']
+                        ]) ?>
+
+                        <!--
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Проектирование <span class="caret"></span></a>
@@ -64,6 +73,7 @@
                                 </ul>
                             </li>
                         </ul>
+                        -->
                     </div>
                     <div id="links" class="col-md-1">
                         <select name="lang" id="lang">
