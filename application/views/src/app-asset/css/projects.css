@@ -1,0 +1,98 @@
+/*========Menu===========*/
+#nav_projects {
+  background-color: #f5efe9 !important; }
+  #nav_projects .nav-pills > li > a {
+    border-radius: 0; }
+  #nav_projects ul {
+    background-color: #f5efe9; }
+    #nav_projects ul li {
+      border-left: 2px solid #e5dacc; }
+      #nav_projects ul li:last-child {
+        border-right: 2px solid #e5dacc; }
+      #nav_projects ul li a:hover {
+        background-color: #e5dacc;
+        border-radius: none; }
+
+#project_cards .card {
+  width: 266px;
+  height: 400px;
+  background-color: #fff;
+  margin: 30px 0;
+  box-shadow: 2px 2px 5px rgba(25, 24, 22, 0.2);
+  -webkit-box-shadow: 2px 2px 5px rgba(25, 24, 22, 0.2);
+  -moz-box-shadow: 2px 2px 5px rgba(25, 24, 22, 0.2); }
+  #project_cards .card .card-title {
+    position: relative; }
+    #project_cards .card .card-title h4 {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      margin: 0;
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 24px;
+      color: #fff; }
+  #project_cards .card .card-block {
+    margin: 20px 30px; }
+    #project_cards .card .card-block a {
+      display: block;
+      text-align: center; }
+  #project_cards .card .card-text {
+    font-family: 'SansSerif';
+    font-weight: normal;
+    font-size: 14px;
+    height: 50px; }
+
+#project_cards .pagination > li > a {
+  margin: 0 20px;
+  padding: 0 10px;
+  font-size: 34px;
+  color: #512c00;
+  border-color: #e5dacc;
+  background-color: #f5efe9; }
+
+#filtr {
+  margin-top: 30px; }
+  #filtr a, #filtr button {
+    color: #c0221f;
+    background-color: #e5dacc;
+    text-align: left;
+    font-size: 24px;
+    border-radius: 0; }
+  #filtr .list-group-item {
+    border-radius: 0; }
+  #filtr .panel {
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 2px solid #e5dacc;
+    margin: 0; }
+    #filtr .panel label {
+      color: #512c00;
+      font-size: 18px; }
+      #filtr .panel label .chBox {
+        display: block;
+        width: 22px;
+        height: 22px;
+        float: left;
+        border: 2px solid #f5efe9;
+        margin-right: 20px; }
+        #filtr .panel label .chBox:after {
+          content: '';
+          position: absolute; }
+      #filtr .panel label > input[type="checkbox"] {
+        position: relative;
+        display: none; }
+        #filtr .panel label > input[type="checkbox"]:checked + .chBox:after {
+          font-family: 'FontAwesome';
+          content: '\f00c';
+          position: absolute;
+          top: 10px;
+          left: 18px;
+          color: #c0221f; }
+  #filtr button {
+    font-size: 18px;
+    padding: 0;
+    margin-top: 3px;
+    text-align: center; }
+    #filtr button[type="reset"] {
+      color: #512c00; }
