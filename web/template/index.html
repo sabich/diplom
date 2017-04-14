@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<!-- Owl carousel-->
+	<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css" />
+	<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.css" />
+	<!-- Flipster carousel -->
+	<link rel="stylesheet" href="css/jquery.flipster.min.css">
+	<!-- custom styles-->
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.flipster.min.js"></script>
+
+	<title>АРС-Холдинг</title>
+</head>
+<body>
+<!-- HEADER -->
+<header>
+	<nav class="navbar navbar-fixed-top">
+		<section id="top-menu" class="container">
+			<div id="header-wrap" class="row">
+				<div id="logo-top" class="col-md-1 col-xs-1">
+					<a href="index.html">
+						<img src="images/assets/logo-min.png" alt="АРС-Холдинг">
+					</a>
+				</div>
+				<div id="phone" class="col-md-3 col-xs-11">
+					<div class="row">
+						<a href="tel:+77087677887">+7 (708) 767-78-87</a>
+						<a href="tel:+77081888025">+7 (708) 188-80-25</a>
+					</div>
+					<div class="row">
+						<a href="tel:+77779503968">+7 (777) 950-39-68</a>
+						<a href="tel:+77053339272">+7 (705) 333-92-72</a>
+					</div>
+				</div>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Меню</span>
+					<i class="fa fa-list" aria-hidden="true"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<div id="nav-top" class="col-md-5">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Проектирование <span class="caret"></span></a>
+					          <ul class="dropdown-menu">
+					            <li><a href="projects.html">Индивидуальное жилье</a></li>
+					            <li><a href="projects.html">Жилые комплексы</a></li>
+					            <li><a href="projects.html">Промышленные объекты</a></li>
+					            <li><a href="projects.html">Развлекательные комплексы</a></li>
+					          </ul>
+					        	</li>
+							<li class="dropdown">
+		          				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Строительство <span class="caret"></span></a>
+						          <ul class="dropdown-menu">
+						            <li><a href="projects.html">Индивидуальное жилье</a></li>
+						            <li><a href="projects.html">Жилые комплексы</a></li>
+						            <li><a href="projects.html">Строительство ангаров, заводов, СТО</a></li>
+						            <li><a href="projects.html">Рестораны</a></li>
+						          </ul>
+		        			</li>
+							<li><a href="#">Дизайн</a></li>
+							<li class="dropdown">
+		          				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Услуги <span class="caret"></span></a>
+					          <ul class="dropdown-menu">
+					            <li><a href="projects.html">Геология</a></li>
+					            <li><a href="projects.html">Геодезия</a></li>
+					            <li><a href="projects.html">Авторский надзор</a></li>
+					            <li><a href="projects.html">Экспертиза</a></li>
+					            <li><a href="projects.html">Согласование</a></li>
+					          </ul>
+					        </li>
+						</ul>
+					</div>
+					<div id="links" class="col-md-1">
+						<select name="lang" id="lang">
+							<option value="ru">ru</option>
+							<option value="en">en</option>
+						</select>
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+					</div>
+					<div id="callback" class="col-md-2">
+						<a href="tel:+77273561600">+7 (727) 356 16 00</a>
+						<a  data-toggle="modal" href='#callbackModal' class="order_call">заказать звонок</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</nav>
+	<div class="modal fade" id="callbackModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Заказать звонок</h4>
+				</div>
+				<div class="modal-body">
+					<form id="callbackForm" action="#" method="POST" role="form">
+							<label for="callbackFormName">Ваше имя</label>
+							<div class="input-group">
+							  <span class="input-group-addon">
+							  	<i class="fa fa-user" aria-hidden="true"></i>
+							  </span>
+							  <input id="callbackFormName" type="text" class="form-control" placeholder="Ваше имя" aria-describedby="сallbackFormName" required>
+							</div>
+							<label for="callbackFormPhone">Ваш телефон</label>
+							<div class="input-group">
+							  <span class="input-group-addon">
+							  	<i class="fa fa-phone-square" aria-hidden="true"></i>
+							  </span>
+							  <input id="callbackFormPhone" type="tel" class="form-control" placeholder="Номер телефона" aria-describedby="сallbackFormPhone" required>
+							</div>
+						<p>Удобное время звонка</p>
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-bell" aria-hidden="true"></i>
+							</span>
+							<div class="form-control">
+								<select name="callbackHours" class="selectpicker">
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+								</select>
+								<select name="callbackMinutes" class="selectpicker">
+									<option value="0">00</option>
+									<option value="1">01</option>
+									<option value="2">02</option>
+									<option value="3">03</option>
+									<option value="4">04</option>
+									<option value="5">05</option>
+									<option value="6">06</option>
+									<option value="7">07</option>
+									<option value="8">08</option>
+									<option value="9">09</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+									<option value="32">32</option>
+									<option value="33">33</option>
+									<option value="34">34</option>
+									<option value="35">35</option>
+									<option value="36">36</option>
+									<option value="37">37</option>
+									<option value="38">38</option>
+									<option value="39">39</option>
+									<option value="40">40</option>
+									<option value="41">41</option>
+									<option value="42">42</option>
+									<option value="43">43</option>
+									<option value="44">44</option>
+									<option value="45">45</option>
+									<option value="46">46</option>
+									<option value="47">47</option>
+									<option value="48">48</option>
+									<option value="49">49</option>
+									<option value="50">50</option>
+									<option value="51">51</option>
+									<option value="52">52</option>
+									<option value="53">53</option>
+									<option value="54">54</option>
+									<option value="55">55</option>
+									<option value="56">56</option>
+									<option value="57">57</option>
+									<option value="58">58</option>
+									<option value="59">59</option>
+								</select>
+							</div>
+						</div>
+						<button class="btn-order" type="submit">Заказать</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- MAIN SLIDER -->
+	<section id="main-slider">
+		<div id="main_slider" class="owl-carousel owl-theme">
+			<div class="item">
+				<img src="images/slider/image01.jpg" alt="">
+				<div class="item-block">
+					<div class="slide-caption">
+						<img class="logo-max" src="images/assets/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
+						<span class="red-line"></span>
+						<h2>Проект клиники лучевой терапии</h2>
+					</div>
+					<div class="slide-text">
+						<p>Планировкой предусмотрено комфортное обслуживание посетителей, с зонами ожидания и лечения.</p>
+					</div>
+						<div class="nav_slider text left">
+							<span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
+							<span>|</span>
+							<span class="btn customNextBtn"><i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i></span>
+						</div>
+					<a href="#order" class="btn-order">Заказать проект</a>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/slider/image02.jpg" alt="">
+				<div class="item-block">
+					<div class="slide-caption">
+						<img class="logo-max" src="images/assets/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
+						<span class="red-line"></span>
+						<h2>Дизайн спален</h2>
+					</div>
+					<div class="slide-text">
+						<p> Утонченный дизайн спальни в аппартаментах.
+						</p>
+					</div>
+						<div class="nav_slider text left">
+							<span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
+							<span>|</span>
+							<span class="btn customNextBtn"><i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i></span>
+						</div>
+					<a href="#order" class="btn-order">Заказать проект</a>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/slider/image03.jpg" alt="">
+				<div class="item-block">
+					<div class="slide-caption">
+						<img class="logo-max" src="images/assets/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
+						<span class="red-line"></span>
+						<h2>Проект благоустройства территории</h2>
+					</div>
+					<div class="slide-text">
+						<p>Проект дома и гостевого домика выполненный в «сельском» стиле с элементами Прованса, изюминкой проекта является использование соломенной кровли.
+						</p>
+					</div>
+						<div class="nav_slider text left">
+							<span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
+							<span>|</span>
+							<span class="btn customNextBtn"><i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i></span>
+						</div>
+					<a href="#order" class="btn-order">Заказать проект</a>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/slider/image04.jpg" alt="">
+				<div class="item-block">
+					<div class="slide-caption">
+						<img class="logo-max" src="images/assets/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
+						<span class="red-line"></span>
+						<h2>Проект автосалона</h2>
+					</div>
+					<div class="slide-text">
+						<p>Проект автосалона с большой автостоянкой</p>
+					</div>
+						<div class="nav_slider text left">
+							<span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
+							<span>|</span>
+							<span class="btn customNextBtn"><i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i></span>
+						</div>
+					<a href="#order" class="btn-order">Заказать проект</a>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/slider/image05.jpg" alt="">
+				<div class="item-block">
+					<div class="slide-caption">
+						<img class="logo-max" src="images/assets/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
+						<span class="red-line"></span>
+						<h2>Проект  ледовой арены</h2>
+					</div>
+					<div class="slide-text">
+						<p>Проект  ледовой арены представляет собой  сблокированное сооружение из одноэтажной арены. Сооружение в плане имеет Т-образный вид.
+						</p>
+					</div>
+						<div class="nav_slider text left">
+							<span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
+							<span>|</span>
+							<span class="btn customNextBtn"><i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i></span>
+						</div>
+					<a href="#order" class="btn-order">Заказать проект</a>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- MAIN MENU -->
+	<section class="container-fluid">
+		<div id="main_menu" class="row">
+			<ul class="nav">
+				<li id="m_projects" class="col-md-3 no-padding">
+				<div class="dropdown">
+					<div class="item-menu dropdown-toggle" type="button" data-toggle="dropdown"><span>Проектирование</span></div>
+						<ul class="dropdown-menu">
+							<li><a href="projects.html">Индивидуальное жилье</a></li>
+							<li><a href="projects.html">Жилые комплексы</a></li>
+							<li><a href="projects.html">Промышленные объекты</a></li>
+							<li><a href="projects.html">Развлекательные комплексы</a></li>
+						</ul>
+				</div>
+				</li>
+				<li id="m_building" class="col-md-3 no-padding">
+					<div class="dropdown">
+					<div class="item-menu dropdown-toggle" type="button" data-toggle="dropdown"><span>Строительство</span></div>
+						<ul class="dropdown-menu">
+							<li><a href="projects.html">Индивидуальное жилье</a></li>
+							<li><a href="projects.html">Жилые комплексы</a></li>
+							<li><a href="projects.html">Строительство ангаров, заводов, СТО</a></li>
+							<li><a href="projects.html">Рестораны</a></li>
+						</ul>
+					</div>
+				</li>
+				<a href="#"><li id="m_design" class="col-md-3 no-padding"><div class="item-menu"><span>Дизайн</span></div></li></a>
+				<li id="m_services" class="col-md-3 no-padding">
+					<div class="item-menu dropdown-toggle" type="button" data-toggle="dropdown"><span>Услуги</span></div>
+						<ul class="dropdown-menu">
+							<li><a href="projects.html">Геология</a></li>
+							<li><a href="projects.html">Геодезия</a></li>
+							<li><a href="projects.html">Авторский надзор</a></li>
+							<li><a href="projects.html">Экспертиза</a></li>
+							<li><a href="projects.html">Согласование</a></li>
+						</ul>
+				</li>
+			</ul>
+		</div>
+	</section>
+<!-- CONTENT -->
+<main class="content">
+<!-- LAST WORKS -->
+	<section id="last_works">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2 class="title_main">Последние проекты</h2>
+					<p class="desc_main">Индивидуальный подход и инновационные технологии - главные причины наших успехов</p>
+				</div>
+			</div>
+			<div class="row">
+				<div id="project_slider">
+					<div id="coverflow">
+						<ul class="flip-items">
+							<li>
+								<a href="one project.html">
+									<img src="images/works/work-1.png" alt="works">
+								</a>
+							</li>
+							<li>
+								<a href="one project.html">
+									<img src="images/works/work-2.png" alt="works">
+								</a>
+							</li>
+							<li>
+								<a href="one project.html">
+									<img src="images/works/work-3.png" alt="works">
+								</a>
+							</li>
+							<li>
+								<a href="one project.html">
+									<img src="images/works/work-1.png" alt="works">
+								</a>
+							</li>
+							<li>
+								<a href="one project.html">
+									<img src="images/works/work-2.png" alt="works">
+								</a>
+							</li>
+							<li>
+								<a href="one project.html">
+									<img src="images/works/work-3.png" alt="works">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- ORDER -->
+	<section id="order">
+		<div class="container">
+			<h2 class="title_main">Получить консультацию</h2>
+			<p class="desc_main">Оставьте свои контактные данные и мы обязательно свяжимся с Вами</p>
+			<div class="form_order container">
+			<form action="#">
+				<span>вы </span>
+					<select name="org" id="org">
+							<option value="Частное лицо">Частное лицо</option>
+							<option value="Организация">Организация</option>
+					</select>
+					<span>из </span>
+					<select name="city" id="city">
+							<option value="Город">Город</option>
+							<option value="Город">Город</option>
+							<option value="Город">Город</option>
+							<option value="Город">Город</option>
+					</select>
+					<span>вы хотите </span>
+					<select name="project" id="project">
+							<option value="Индивидуальное жилье">Индивидуальное жилье</option>
+							<option value="Жилые комплексы">Жилой комплекс</option>
+							<option value="Промышленные объекты">Промышленный объект</option>
+							<option value="Развлекательные комплексы">Развлекательный комплекс</option>
+					</select>
+					<a href="#" class="btn-order">расчитать</a>
+			</form>
+			</div>
+		</div>
+	</section>
+<!-- ABOUT US -->
+	<section id="about_us">
+		<div class="container">
+			<h2 class="title_main">О нас</h2>
+				<p class="desc_main">
+					Успех и дальнейший рост на пресыщенном и нестабильном строительном рынке Казахстана впредь остается прерогативой сильных компаний с отлаженной рабочей моделью. Среди таковых – ARS Holding, международная команда архитекторов и инженеров, ставящая перед собой амбициозную и, вместе с тем, благородную цель – поднять уровень строительства в Казахстане до стандартов развитых стран.
+				</p>
+				<h3>О холдинге</h3>
+				<p>ARS Holding - глобальная сеть проектно-строительных компаний, основанная в 1997 году в Украине. В настоящее время реализованные проекты холдинга можно встретить в городах Германии, Польши, Украины, Киргизстана и Казахстана. География присутствия холдинга не случайна - она базируется на общности климатологии, геологии и целого ряда строительных факторов, что создает условия для обмена опытом между сотрудниками разных стран и усиливает позиции компании в каждом отдельном регионе.</p>
+				<p></p>
+				<h3>ARS Holding в Казахстане</h3>
+				<p>В Казахстане ARS Holding представлен интернациональной командой молодых, но опытных специалистов - гуру инжиниринга, архитектуры и дизайна. Наша миссия заключается в изменении менталитета казахстанцев в области архитектуры и в формировании новой, ориентированной на человека градостроительной среды. Практикуя западный подход в принятии корпоративной ответственности, мы выражаем убеждение, что от нашей работы зависит жизнь, безопасность и здоровье людей. Беспристрастный научный просчет неизменно сопровождает творческий процесс, и эта синергия обеспечивает высокое качество и долговечность реализуемых нами проектов.</p>
+				<p>Специализацией ARS Holding является разработка, проектирование и строительство объектов жилой, коммерческой и деловой недвижимости. От планировки комнаты до возведения сложных гидротехнических сооружений – каждый наш проект– это воплощенный в архитектурных формах комфорт и высокий стиль. Созданные нами проекты подчас превосходят представление казахстанцев о жилых и коммерческих помещениях. Значение в них имеют мельчайшие детали – сколько шагов от входной двери совершит будущая хозяйка квартиры, прежде, чем сможет опустить с рук тяжелые продуктовые пакеты, и достаточно ли свободного пространства в доме для подрастающих детей.</p>
+				<p>Наши архитекторы уделяют большое внимание экологичности проекта и его инсоляции - степени проникновения солнечных лучей внутрь помещения, что влияет не только на стиль комнат, но и на формирование в них правильного, здорового микроклимата.</p>
+				<h3>Антисейсмическое проектирование</h3>
+				<p>Высокая экспертиза в области сейсмики является еще одним преимуществом нашей компании. В противовес традиционному для Казахстана методу укрепления зданий за счет увеличения объемов бетона, специалисты ARS Holding применяют принципиально новые технологии антисейсмического проектирования, успешно внедренные в большинстве высокоразвитых стран. Эти технологии сложней на этапе проектирования, однако, в разы экономичней и проще на этапе строительства. Они не только обеспечивают безопасность зданий, но и сокращают издержки заказчиков.</p>
+				<h3>Реализованные проекты</h3>
+				<p>За последний год в портфолио ARS Holding появилось несколько крупных реализованных проектов. Среди них - проектирование и строительство торгово-административного комплекса для компании «Вираж Авто», а также проектирование бутик-отеля и элитного жилого комплекса в Алматы. Вместе с тем, ведется работа и над другими архитектурными объектами Алматы.</p>
+				<h3>Предпосылки для будущего успеха</h3>
+				<p>Начав работу в 2015 году с глубокого и детального изучения строительной экосистемы Казахстана, ARS Holding за недолгий период занял место среди сильнейших игроков индустрии. Мы работаем с государственными заказами, активно инвестируем в строительство объектов, тем самым выстраивая фундамент для долгосрочного успеха на рынке Казахстана.</p>
+				<p>Миссия ARS Holding включает в себя воспитание нового поколения специалистов из числа молодых казахстанцев, дальнейшая работа которых будет основана на четком соблюдении нормативов и внедрении прогрессивных мировых технологий.</p>
+				<p>В условиях складывающейся непредсказуемости прочной основой нашей компании служат непоколебимые ценности: профессионализм сотрудников, прогрессивный подход к работе и высокая ответственность перед обществом.
+				</p>
+		</div>
+	</section>
+<!-- FEEDBACK -->
+	<section id="feedback">
+		<div class="container">
+				<form id="feedback_form" action="#">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<div class="row">
+								<div class="col-md-6">
+									<input type="text" class="form-control" placeholder="Ваше имя" required>
+								</div>
+								<div class="col-md-6">
+									<input type="email" class="form-control" placeholder="Ваш Email" required>
+								</div>
+							</div>
+							<textarea class="form-control" rows="5" name="text">Оставить отзыв</textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center">
+						<input type="submit" value="Оставить отзыв" class="btn-order">
+						</div>
+					</div>
+				</form>
+		</div>
+	</section>
+</main>
+<!-- FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<img class="logo-max" src="images/assets/logo-max.png" alt="АРС-Холдинг">
+					<h3>ARS Holding</h3>
+					<p class="text_footer">
+					В Казахстане ARS Holding представлен интернациональной командой молодых, но опытных специалистов - гуру инжиниринга, архитектуры и дизайна. Их общая миссия заключается в изменении менталитета казахстанцев в области архитектуры и в формировании новой, ориентированной на человека градостроительной среды.
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h3>Контактная информация</h3>
+					<p class="text_footer">Добро пожаловать в наш офис. Мы всегда рады осуществить Вашу мечту.</p>
+					<address>
+							Адрес: Республика Казахстан, <br>
+							050040, г. Алматы, просп. Аль-Фараби, д.73/2. <br>
+							Телефон: +7 (727) 356 16 00 <br>
+							Email: <a href="mailto:info@ars-holding.com">info@ars-holding.com</a>.<br>
+							Рабочее время: 9 <sup>00</sup> - 18 <sup>00</sup> (Алматы)
+					</address>
+				</div>
+				<div class="col-md-4">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4tr2Q87NSqrTZfaOUJvP1ZZkps-LlN1X&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
+				</div>
+			</div>
+			<hr>
+			<p class="text-right">&copy 2017 copyright</p>
+		</div>
+	</footer>
+
+<!-- SCRIPTS -->
+	<script src="js/custom.js"></script>
+
+</body>
+</html>
