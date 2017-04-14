@@ -19,4 +19,12 @@ class CatalogController extends \app\base\Controller {
 
         return $this->render('index', ['projectsProvider' => $provider]);
     }
+
+    public function actionProject($id) {
+        $project = Project::findOne($id);
+
+        if (!$project) throw new NotFoundHttpException('Проект не найден');
+
+        return $this->render('project', ['project' => $project]);
+    }
 }
