@@ -3,11 +3,20 @@
 namespace app\controllers;
 
 use app\models\Project;
+use yii\data\ActiveDataProvider;
+use yii\web\NotFoundHttpException;
 
 class CatalogController extends \app\base\Controller {
-    public function actionIndex() {
-        $projects = Project::find()->limit(9)->all();
+    public $layout = 'catalog';
 
-        return $this->render('index', ['projects' => $projects]);
+    public function actionIndex() {
+        $provider = new ActiveDataProvider([
+            'query' => Project::find(),
+            'pagination' => [
+                'pageSize' => 9
+            ]
+        ]);
+
+        return $this->render('index', ['projectsProvider' => $provider]);
     }
 }
