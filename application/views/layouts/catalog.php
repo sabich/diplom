@@ -4,8 +4,6 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -28,35 +26,17 @@ AppAsset::register($this);
 
 <?= $this->render('/../chunks/header.php') ?>
 
-<section class="contaner-fluid">
-    <nav id="nav_projects" class="navbar" role="navigation">
-        <div class="container">
-            <?= Nav::widget([
-                'options' => [
-                    'class' => 'nav nav-pills nav-justified'
-                ],
-                'items' => $this->params['main_menu']['Проектирование']
+<main>
+    <div class="container">
+        <div class="row">
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
-<!--            <ul class="nav nav-pills nav-justified">-->
-<!--                <li><a href="#">Индивидуальное жилье</a></li>-->
-<!--                <li><a href="#">Жилые комплексы</a></li>-->
-<!--                <li><a href="#">Промышленные объекты</a></li>-->
-<!--                <li><a href="#">Развлекательные комплексы</a></li>-->
-<!--            </ul>-->
         </div>
-    </nav>
-</section>
-
-<div class="container">
-    <div class="row">
-
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-
-        <?= $content ?>
     </div>
-</div>
+
+    <?= $content ?>
+</main>
 
 <?= $this->render('/../chunks/footer.php') ?>
 
