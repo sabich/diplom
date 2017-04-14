@@ -12,19 +12,19 @@ class ActiveRecord extends \yii\db\ActiveRecord {
             if (!is_array($this->timestampBehavior)) {
                 $this->timestampBehavior = [
                     'class' => TimestampBehavior::className(),
-                    'createdAttribute' => 'created',
-                    'updatedAttribute' => 'updated'
+                    'createdAtAttribute' => 'created',
+                    'updatedAtAttribute' => 'updated'
                 ];
             } else {
                 if (!isset($this->timestampBehavior['class'])) {
                     $this->timestampBehavior['class'] = TimestampBehavior::className();
                 }
 
-                if (!isset($this->timestampBehavior['createdAttribute'])) {
+                if (!isset($this->timestampBehavior['createdAtAttribute'])) {
                     $this->timestampBehavior['createdAttribute'] = 'created';
                 }
 
-                if (!isset($this->timestampBehavior['updatedAttribute'])) {
+                if (!isset($this->timestampBehavior['updatedAtAttribute'])) {
                     $this->timestampBehavior['updatedAttribute'] = 'updated';
                 }
             }
