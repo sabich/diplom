@@ -4,6 +4,8 @@
  * Date: 11.04.17
  * Time: 19:25
  */
+
+use yii\helpers\Url;
 ?>
 
 <!-- LAST WORKS -->
@@ -20,32 +22,32 @@
                 <div id="coverflow">
                     <ul class="flip-items">
                         <li>
-                            <a href="one project.html">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
                                 <img src="images/works/work-1.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="one project.html">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
                                 <img src="images/works/work-2.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="one project.html">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
                                 <img src="images/works/work-3.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="one project.html">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
                                 <img src="images/works/work-4.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="one project.html">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
                                 <img src="images/works/work-5.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="one project.html">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
                                 <img src="images/works/work-6.png" alt="works">
                             </a>
                         </li>
