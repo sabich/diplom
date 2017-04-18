@@ -6,6 +6,7 @@
  */
 
 use yii\bootstrap\Nav;
+use yii\helpers\Url;
 ?>
 
 <!-- HEADER -->
@@ -57,6 +58,7 @@ use yii\bootstrap\Nav;
             </div>
         </section>
     </nav>
+
     <div class="modal fade" id="callbackModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -65,20 +67,22 @@ use yii\bootstrap\Nav;
                     <h4 class="modal-title">Заказать звонок</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="callbackForm" action="#" method="POST" role="form">
+                    <form id="callbackForm" action="<?= Url::to(['site/callback']) ?>" method="POST" role="form">
+                        <input type="hidden" name="_csrf" value="<?= \Yii::$app->request->csrfToken ?>" />
+
                         <label for="callbackFormName">Ваше имя</label>
                         <div class="input-group">
 							  <span class="input-group-addon">
 							  	<i class="fa fa-user" aria-hidden="true"></i>
 							  </span>
-                            <input type="text" class="form-control" placeholder="Ваше имя" aria-describedby="сallbackFormName" required>
+                            <input type="text" name="CallbackForm[name]" class="form-control" placeholder="Ваше имя" aria-describedby="сallbackFormName" required>
                         </div>
                         <label for="callbackFormPhone">Ваш телефон</label>
                         <div class="input-group">
 							  <span class="input-group-addon">
 							  	<i class="fa fa-phone-square" aria-hidden="true"></i>
 							  </span>
-                            <input type="tel" class="form-control" placeholder="Номер телефона" aria-describedby="сallbackFormPhone" required>
+                            <input type="tel" name="CallbackForm[phone]" class="form-control" placeholder="Номер телефона" aria-describedby="сallbackFormPhone" required>
                         </div>
                         <p>Удобное время звонка</p>
                         <div class="input-group">
@@ -86,7 +90,7 @@ use yii\bootstrap\Nav;
 								<i class="fa fa-bell" aria-hidden="true"></i>
 							</span>
                             <div class="form-control">
-                                <select name="callbackHours" class="selectpicker">
+                                <select name="CallbackForm[hour]" class="selectpicker">
                                     <?php
                                         for ($h=9; $h<19; $h++) { ?>
                                             <option value="<?= $h ?>"><?= $h ?></option>
@@ -94,7 +98,7 @@ use yii\bootstrap\Nav;
                                         }
                                     ?>
                                 </select>
-                                <select name="callbackMinutes" class="selectpicker">
+                                <select  name="CallbackForm[minute]" class="selectpicker">
                                     <?php
                                     for ($m=0; $m<60; $m++) { ?>
                                         <option value="<?= $m ?>"><?= $m ?></option>
@@ -110,4 +114,11 @@ use yii\bootstrap\Nav;
             </div>
         </div>
     </div>
+    <?php
+        if (\Yii::$app->session->hasFlash('callbackErrors')) {
+            $this->registerJs("
+                console.log('Callback errors:', " . json_encode(\Yii::$app->session->getFlash('callbackErrors')) . ");
+            ");
+        }
+    ?>
 </header>
