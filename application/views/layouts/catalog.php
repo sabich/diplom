@@ -5,9 +5,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
+use app\assets\CatalogAsset;
 
-AppAsset::register($this);
+CatalogAsset::register($this);
 ?>
 
 <?php $this->beginPage() ?>
