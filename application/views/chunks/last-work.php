@@ -36,17 +36,17 @@
                         </li>
                         <li>
                             <a href="one project.html">
-                                <img src="images/works/work-1.png" alt="works">
+                                <img src="images/works/work-4.png" alt="works">
                             </a>
                         </li>
                         <li>
                             <a href="one project.html">
-                                <img src="images/works/work-2.png" alt="works">
+                                <img src="images/works/work-5.png" alt="works">
                             </a>
                         </li>
                         <li>
                             <a href="one project.html">
-                                <img src="images/works/work-3.png" alt="works">
+                                <img src="images/works/work-6.png" alt="works">
                             </a>
                         </li>
                     </ul>

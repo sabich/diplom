@@ -38,6 +38,7 @@ AppAsset::register($this);
                 <?= $content ?>
             </div>
         </div>
+
     <?= $this->render('/../chunks/last-work.php') ?>
     <?= $this->render('/../chunks/order.php') ?>
     <?= $this->render('/../chunks/about-us.php') ?>

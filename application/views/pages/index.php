@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Url;
+
 $this->title = 'ARS Holding';
 ?>
 <!-- MAIN SLIDER -->
@@ -30,7 +32,7 @@ $this->title = 'ARS Holding';
             <img src="/images/slider/image02.jpg" alt="">
             <div class="item-block">
                 <div class="slide-caption">
-                    <img class="logo-max" src="images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
+                    <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
                     <h2>Дизайн спален</h2>
                 </div>
@@ -115,35 +117,22 @@ $this->title = 'ARS Holding';
                 <div class="dropdown">
                     <div class="item-menu dropdown-toggle" type="button" data-toggle="dropdown"><span>Проектирование</span></div>
                     <ul class="dropdown-menu">
-                        <li><a href="projects.html">Индивидуальное жилье</a></li>
-                        <li><a href="projects.html">Жилые комплексы</a></li>
-                        <li><a href="projects.html">Промышленные объекты</a></li>
-                        <li><a href="projects.html">Развлекательные комплексы</a></li>
+                        <li><a href="<?= Url::toRoute(['catalog/index', 'typeId' => '1']) ?>">Индивидуальное жилье</a></li>
+                        <li><a href="<?= Url::toRoute(['catalog/index', 'typeId' => '2']) ?>">Жилые комплексы</a></li>
+                        <li><a href="<?= Url::toRoute(['catalog/index', 'typeId' => '3']) ?>">Промышленные объекты</a></li>
+                        <li><a href="<?= Url::toRoute(['catalog/index', 'typeId' => '4']) ?>">Развлекательные комплексы</a></li>
                     </ul>
                 </div>
             </li>
             <li id="m_building" class="col-md-3 no-padding">
-                <div class="dropdown">
-                    <div class="item-menu dropdown-toggle" type="button" data-toggle="dropdown"><span>Строительство</span></div>
-                    <ul class="dropdown-menu">
-                        <li><a href="projects.html">Индивидуальное жилье</a></li>
-                        <li><a href="projects.html">Жилые комплексы</a></li>
-                        <li><a href="projects.html">Строительство ангаров, заводов, СТО</a></li>
-                        <li><a href="projects.html">Рестораны</a></li>
-                    </ul>
-                </div>
+                    <div class="item-menu"><span>Строительство</span></div>
             </li>
             <a href="#"><li id="m_design" class="col-md-3 no-padding"><div class="item-menu"><span>Дизайн</span></div></li></a>
-            <li id="m_services" class="col-md-3 no-padding">
-                <div class="item-menu dropdown-toggle" type="button" data-toggle="dropdown"><span>Услуги</span></div>
-                <ul class="dropdown-menu">
-                    <li><a href="projects.html">Геология</a></li>
-                    <li><a href="projects.html">Геодезия</a></li>
-                    <li><a href="projects.html">Авторский надзор</a></li>
-                    <li><a href="projects.html">Экспертиза</a></li>
-                    <li><a href="projects.html">Согласование</a></li>
-                </ul>
-            </li>
+            <a href="<?= Url::to('/service') ?>">
+                <li id="m_services" class="col-md-3 no-padding">
+                    <div class="item-menu"><span>Услуги</span></div>
+                </li>
+            </a>
         </ul>
     </div>
 </section>

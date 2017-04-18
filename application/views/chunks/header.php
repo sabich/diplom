@@ -40,40 +40,6 @@ use yii\bootstrap\Nav;
                             ],
                             'items' => $this->params['main_menu']
                         ]) ?>
-
-                        <!--
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Проектирование <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="projects.html">Индивидуальное жилье</a></li>
-                                    <li><a href="projects.html">Жилые комплексы</a></li>
-                                    <li><a href="projects.html">Промышленные объекты</a></li>
-                                    <li><a href="projects.html">Развлекательные комплексы</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Строительство <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="projects.html">Индивидуальное жилье</a></li>
-                                    <li><a href="projects.html">Жилые комплексы</a></li>
-                                    <li><a href="projects.html">Строительство ангаров, заводов, СТО</a></li>
-                                    <li><a href="projects.html">Рестораны</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Дизайн</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Услуги <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="projects.html">Геология</a></li>
-                                    <li><a href="projects.html">Геодезия</a></li>
-                                    <li><a href="projects.html">Авторский надзор</a></li>
-                                    <li><a href="projects.html">Экспертиза</a></li>
-                                    <li><a href="projects.html">Согласование</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        -->
                     </div>
                     <div id="links" class="col-md-1">
                         <select name="lang" id="lang">
