@@ -22,10 +22,6 @@ class AppAsset extends AssetBundle
         'css/jquery.flipster.min.css',
         'css/owlcarousel/owl.carousel.min.css',
         'css/owlcarousel/owl.theme.default.css',
-        'css/lightslider.min.css',
-	    'css/lightGallery/lg-fb-comment-box.min.css',
-	    'css/lightGallery/lg-transitions.min.css',
-	    'css/lightGallery/lightgallery.css',
         'css/fonts.css',
         'css/main.css',
         'css/project.css',
@@ -34,18 +30,9 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/bootstrap-select.min.js',
-        'js/lightslider.min.js',
-	    'js/lightgallery/lightgallery.js',
-	    'js/lightgallery/lg-autoplay.js',
-	    'js/lightgallery/lg-fullscreen.js',
-	    'js/lightgallery/lg-hash.js',
-	    'js/lightgallery/lg-pager.js',
-	    'js/lightgallery/lg-thumbnail.js',
-	    'js/lightgallery/lg-video.js',
-	    'js/lightgallery/lg-zoom.js',
         'js/jquery.flipster.min.js',
         'js/owl.carousel.min.js',
-        'js/custom.js',
+        'js/main.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
