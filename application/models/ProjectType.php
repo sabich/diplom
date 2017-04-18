@@ -7,7 +7,7 @@ class ProjectType extends \app\base\Activerecord {
     public $timestampBehavior = false;
 
     public static function tableName() {
-        return 'project';
+        return 'project_type';
     }
 
     public function rules() {
