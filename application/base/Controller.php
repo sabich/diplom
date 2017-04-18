@@ -5,6 +5,8 @@ namespace app\base;
 class Controller extends \yii\web\Controller {
     public function beforeAction($action) {
         if (parent::beforeAction($action)) {
+            \Yii::$app->user->setReturnUrl(\Yii::$app->request->referrer);
+
             $this->view->params['main_menu'] = [
                 [
                     'label' => 'Проектирование',
