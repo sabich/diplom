@@ -3,6 +3,10 @@
   background-color: #f5efe9 !important; }
   #nav_projects .nav-pills > li > a {
     border-radius: 0; }
+  #nav_projects .nav-pills > li.active > a, #nav_projects .nav-pills > li.active > a:hover, #nav_projects .nav-pills > li.active > a:focus {
+    color: #c0221f;
+    background-color: transparent;
+    border: 1px solid; }
   #nav_projects ul {
     background-color: #f5efe9; }
     #nav_projects ul li {
@@ -14,8 +18,6 @@
         border-radius: none; }
 
 #project_cards .card {
-  width: 266px;
-  height: 400px;
   background-color: #fff;
   margin: 30px 0;
   box-shadow: 2px 2px 5px rgba(25, 24, 22, 0.2);
@@ -25,15 +27,19 @@
     position: relative; }
     #project_cards .card .card-title h4 {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
+      bottom: 10%;
+      left: 10%;
       margin: 0;
       font-family: 'Roboto';
       font-weight: normal;
       font-size: 24px;
       color: #fff; }
+  #project_cards .card img {
+    margin: auto; }
   #project_cards .card .card-block {
-    margin: 20px 30px; }
+    margin: 20px;
+    text-align: center;
+    padding-bottom: 20px; }
     #project_cards .card .card-block a {
       display: block;
       text-align: center; }
@@ -41,12 +47,12 @@
     font-family: 'SansSerif';
     font-weight: normal;
     font-size: 14px;
-    height: 50px; }
+    height: 65px; }
 
 #project_cards .pagination > li > a {
   margin: 0 20px;
   padding: 0 10px;
-  font-size: 34px;
+  font-size: 20px;
   color: #512c00;
   border-color: #e5dacc;
   background-color: #f5efe9; }
