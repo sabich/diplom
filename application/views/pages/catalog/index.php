@@ -3,6 +3,7 @@
 use yii\bootstrap\Nav;
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
+
 ?>
 
 <section class="contaner-fluid">
@@ -27,7 +28,7 @@ use yii\helpers\Url;
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-title">
-                                    <img class="card-img-top" src="/images/projects/small/pr1.png" alt="Card image cap">
+                                    <img class="card-img-top img-responsive" src="/images/projects/small/<?= $project->cover ?>.png" alt="<?= $project->article ?>">
                                     <h4><?= $project->article ?></h4>
                                 </div>
                                 <div class="card-block">

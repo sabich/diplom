@@ -2,9 +2,10 @@
 
 namespace app\models;
 
+use app\base\ActiveRecord;
 use yii\db\Query;
 
-class Project extends \app\base\Activerecord {
+class Project extends ActiveRecord {
     const TYPE_INDIVIDUAL = 1;
     const TYPE_RESIDENTIAL = 2;
     const TYPE_INDUSTRIAL = 3;
