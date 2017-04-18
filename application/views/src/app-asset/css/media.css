@@ -19,14 +19,18 @@
       padding: 0 8px; }
   #phone a {
     display: inline-block;
-    padding: 0; } }
+    padding: 0; }
+  #filtr a, #filtr button {
+    font-size: 18px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   #nav-top ul li {
     float: none; }
   .content {
-    margin-top: 114px; } }
+    margin-top: 114px; }
+  #project_cards .card h4 {
+    left: 35% !important; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -36,6 +40,10 @@
     margin-top: 132px; } }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #project_cards .card h4 {
+    left: 25% !important; } }
+
 /* Custom, iPhone Retina */
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */

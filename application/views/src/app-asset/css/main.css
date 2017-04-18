@@ -181,6 +181,16 @@ nav {
     position: absolute;
     bottom: 0; }
 
+.owl-carousel .owl-stage-outer {
+  z-index: -1; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: -25px; }
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 30px;
+  border-radius: 0; }
+
 .btn-order {
   color: #c0221f !important;
   font-size: 16px;
@@ -278,7 +288,8 @@ main {
 
 /*====================== LAST WORKS ========================*/
 #last_works {
-  margin: 50px 0; }
+  margin: 50px 0;
+  opacity: .8; }
   #last_works .flip-items img {
     -webkit-box-shadow: 0px 0px 24px 11px rgba(0, 0, 0, 0.37);
     -moz-box-shadow: 0px 0px 24px 11px rgba(0, 0, 0, 0.37);
@@ -288,34 +299,42 @@ main {
 /*====================== ORDER ============================*/
 #order {
   background-image: url("../images/assets/overlay.png");
-  height: 264px; }
-  #order a {
-    text-transform: uppercase; }
-  #order .form_order {
-    text-transform: uppercase;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    color: #512c00;
-    border: 2px solid #977f63; }
-    #order .form_order span {
-      font-family: "Open Sans";
-      font-weight: lighter;
-      font-size: 24px;
-      color: #512c00; }
-    #order .form_order select {
-      margin-right: 30px;
-      font-family: "Ubuntu";
-      font-weight: normal;
-      font-size: 24px;
-      background-color: transparent;
-      border: none;
-      text-transform: uppercase;
-      color: #512c00; }
+  padding-bottom: 2em; }
+  #order input[type=text], #order input[type=tel] {
+    background: #f5efe9;
+    margin: 1.5em 0;
+    min-height: 2.5em;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35) inset;
+    border-radius: 5px;
+    padding-left: 15px;
+    width: 100%; }
+  #order input[type=submit] {
+    display: block;
+    margin: auto;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 20px;
+    background-color: transparent; }
 
 /*======================= ABOUT US =======================*/
 #about_us p {
-  text-align: justify; }
+  text-align: justify;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 300; }
+
+#about_us .desc_main {
+  padding: 0 4em;
+  font-size: 14px; }
+
+#about_us img {
+  padding: 20px; }
+
+#about_us .img-left {
+  float: left; }
+
+#about_us .img-right {
+  float: right; }
 
 /*======================= FEEDBACK ========================*/
 #feedback {
@@ -358,3 +377,5 @@ footer {
     font-size: 15px; }
     footer address a, footer address:hover {
       color: #fff; }
+  footer .logo-max {
+    padding-right: 10px; }
