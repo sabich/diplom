@@ -11,33 +11,31 @@ class Controller extends \yii\web\Controller {
                     'items' => [
                         [
                             'label' => 'Индивидуальное жилье',
-                            'url' => ''
+                            'url' => ['catalog/index', 'typeId'=>'1'],
                         ],
                         [
                             'label' => 'Жилые комплексы',
-                            'url' => ''
+                            'url' => ['catalog/index', 'typeId'=>'2'],
                         ],
                         [
                             'label' => 'Промышленные объекты',
-                            'url' => ''
+                            'url' => ['catalog/index', 'typeId'=>'3'],
                         ],
                         [
                             'label' => 'Развлекательные комплексы',
-                            'url' => ''
+                            'url' => ['catalog/index', 'typeId'=>'4'],
                         ]
                     ]
                 ],
                 [
                     'label' => 'Строительство',
-                    'items' => []
                 ],
                 [
                     'label' => 'Дизайн',
-                    'items' => []
                 ],
                 [
                     'label' => 'Услуги',
-                    'items' => []
+                    'url' => ['site/service'],
                 ],
             ];
 
