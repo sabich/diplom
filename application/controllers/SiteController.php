@@ -8,4 +8,8 @@ class SiteController extends \app\base\Controller
     {
         return $this->render('/index');
     }
+    public function actionService()
+    {
+        return $this->render('/service');
+    }
 }
