@@ -7,7 +7,6 @@ use yii\helpers\Url;
 <section id=project_nav>
     <div class="container">
         <h2 class="title_project">Проект <?= $project->article ?></h2>
-        <h2>Проект <?= $project->type->name ?></h2>
         <hr>
     </div>
 </section>

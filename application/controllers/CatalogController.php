@@ -9,9 +9,9 @@ use yii\web\NotFoundHttpException;
 class CatalogController extends \app\base\Controller {
     public $layout = 'catalog';
 
-    public function actionIndex() {
+    public function actionIndex($typeId) {
         $provider = new ActiveDataProvider([
-            'query' => Project::find(),
+            'query' => Project::find()->where(['typeId' => $typeId]),
             'pagination' => [
                 'pageSize' => 9
             ]
