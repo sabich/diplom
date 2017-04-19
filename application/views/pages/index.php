@@ -34,10 +34,10 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Дизайн спален</h2>
+                    <h2>Дизайн</h2>
                 </div>
                 <div class="slide-text">
-                    <p> Утонченный дизайн спальни в аппартаментах.
+                    <p> Утонченный дизайн в аппартаментах.
                     </p>
                 </div>
                 <div class="nav_slider text left">
