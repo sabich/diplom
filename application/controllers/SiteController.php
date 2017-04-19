@@ -21,7 +21,9 @@ class SiteController extends \app\base\Controller
             $form = new CallbackForm();
             $form->load(\Yii::$app->request->post());
 
-            if (!$form->run()) {
+            if ($form->run()) {
+                \Yii::$app->session->setFlash('callbackSuccess', true);
+            } else {
                 \Yii::$app->session->setFlash('callbackErrors', $form->errors);
             }
         }
