@@ -115,6 +115,12 @@ use yii\helpers\Url;
         </div>
     </div>
     <?php
+        if (\Yii::$app->session->hasFlash('callbackSuccess')) {
+            $this->registerJs("
+                alert('Ваш запрос отправлен.');
+            ");
+        }
+
         if (\Yii::$app->session->hasFlash('callbackErrors')) {
             $this->registerJs("
                 console.log('Callback errors:', " . json_encode(\Yii::$app->session->getFlash('callbackErrors')) . ");

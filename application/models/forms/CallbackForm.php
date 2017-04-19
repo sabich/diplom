@@ -18,9 +18,29 @@ class CallbackForm extends \yii\base\Model {
 
     public function run() {
         if ($this->validate()) {
-            return true;
+            if (
+                \Yii::$app->mailer->compose('callback', [
+                    'name' => $this->name,
+                    'phone' => $this->phone,
+                    'time' => $this->time
+                ])
+                ->setFrom(\Yii::$app->params['systemEmail'])
+                ->setTo(\Yii::$app->params['adminEmail'])
+                ->setSubject('Запрос обратного звонка')
+                ->send()
+            ) {
+                return true;
+            }
         }
 
         return false;
+    }
+
+    public function getTime() {
+        if ($this->hour) {
+            return $this->minute ? $this->hour . ':' . $this->minute : $this->hour . ':00';
+        }
+
+        return date('H:i');
     }
 }
