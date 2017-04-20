@@ -11,6 +11,7 @@ class CatalogController extends \app\base\Controller {
 
     public function actionIndex($typeId) {
         $provider = new ActiveDataProvider([
+//            'query' => Project::find()->where(['typeId' => $typeId])->orderBy(['id'=>SORT_DESC]),
             'query' => Project::find()->where(['typeId' => $typeId]),
             'pagination' => [
                 'pageSize' => 9

@@ -14,18 +14,12 @@ use yii\helpers\Url;
     <div class="row">
         <div id="gallery" class="col-md-9">
             <ul id="imageGallery">
-                <li data-thumb="/images/gallery/thumbs/pij123-1-thumb.png" data-src="/images/gallery/pij123-1.png">
-                    <img src="/images/gallery/slider/pij123-1.png" />
+                <?php for ($i=1; $i<=7; $i++) { ?>
+                <li data-thumb="/images/gallery/thumbs/<?= $project->cover.'s'.$i ?>.png"
+                    data-src="/images/gallery/<?= $project->cover.'-'.$i ?>.png">
+                    <img src="/images/gallery/slider/<?= $project->cover.'-'.$i ?>.png" />
                 </li>
-                <li data-thumb="/images/gallery/thumbs/pij123-2-thumb.png" data-src="/images/gallery/pij123-2.png">
-                    <img src="/images/gallery/slider/pij123-2.png" />
-                </li>
-                <li data-thumb="/images/gallery/thumbs/pij123-3-thumb.png" data-src="/images/gallery/pij123-3.png">
-                    <img src="/images/gallery/slider/pij123-3.png" />
-                </li>
-                <li data-thumb="/images/gallery/thumbs/pij123-4-thumb.png" data-src="/images/gallery/pij123-4.png">
-                    <img src="/images/gallery/slider/pij123-4.png" />
-                </li>
+                <?php } ?>
             </ul>
         </div>
         <div class="col-md-3 tep">
