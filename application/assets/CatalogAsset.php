@@ -6,6 +6,7 @@ class CatalogAsset extends \yii\web\AssetBundle {
     public $sourcePath = '@app/views/src/app-asset';
     public $baseUrl = '@web';
     public $css = [
+        'css/bootstrap-select.min.css',
         'css/lightslider.min.css',
         'css/lightGallery/lg-fb-comment-box.min.css',
         'css/lightGallery/lg-transitions.min.css',
@@ -17,6 +18,7 @@ class CatalogAsset extends \yii\web\AssetBundle {
         'css/media.css',
     ];
     public $js = [
+        'js/bootstrap-select.min.js',
         'js/lightslider.min.js',
         'js/lightgallery/lightgallery.js',
         'js/lightgallery/lg-autoplay.js',
