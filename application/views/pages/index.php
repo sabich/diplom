@@ -128,7 +128,7 @@ $this->title = 'ARS Holding';
                     <div class="item-menu"><span>Строительство</span></div>
             </li>
             <a href="#"><li id="m_design" class="col-md-3 no-padding"><div class="item-menu"><span>Дизайн</span></div></li></a>
-            <a href="<?= Url::to('/service') ?>">
+            <a href="<?= Url::to('site/service') ?>">
                 <li id="m_services" class="col-md-3 no-padding">
                     <div class="item-menu"><span>Услуги</span></div>
                 </li>

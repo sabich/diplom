@@ -23,32 +23,32 @@ use yii\helpers\Url;
                     <ul class="flip-items">
                         <li>
                             <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="images/works/work-1.png" alt="works">
+                                <img src="/images/works/work-1.png" alt="works">
                             </a>
                         </li>
                         <li>
                             <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="images/works/work-2.png" alt="works">
+                                <img src="/images/works/work-2.png" alt="works">
                             </a>
                         </li>
                         <li>
                             <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="images/works/work-3.png" alt="works">
+                                <img src="/images/works/work-3.png" alt="works">
                             </a>
                         </li>
                         <li>
                             <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="images/works/work-4.png" alt="works">
+                                <img src="/images/works/work-4.png" alt="works">
                             </a>
                         </li>
                         <li>
                             <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="images/works/work-5.png" alt="works">
+                                <img src="/images/works/work-5.png" alt="works">
                             </a>
                         </li>
                         <li>
                             <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="images/works/work-6.png" alt="works">
+                                <img src="/images/works/work-6.png" alt="works">
                             </a>
                         </li>
                     </ul>

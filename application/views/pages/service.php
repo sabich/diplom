@@ -3,7 +3,7 @@
 ?>
 
 <!-- SERVICE -->
-
+<main>
 <section id="services">
         <div class="container">
             <div class="row">
@@ -57,3 +57,4 @@
         </div>
 
 </section>
+</main>
