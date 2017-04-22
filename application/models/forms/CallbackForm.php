@@ -12,7 +12,9 @@ class CallbackForm extends \yii\base\Model {
         return [
             [['name', 'phone'], 'required'],
             [['name'], 'string', 'min' => 2, 'max' => 20],
-            [['phone'], 'match', 'pattern' => '/^\+?[\d() -]{5,25}$/']
+            [['phone'], 'match', 'pattern' => '/^\+?[\d() -]{5,25}$/'],
+            [['hour'], 'integer', 'min' => 9, 'max' => 18],
+            [['minute'], 'integer', 'min' => 0, 'max' => 59]
         ];
     }
 
