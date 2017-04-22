@@ -24,8 +24,6 @@ class AppAsset extends AssetBundle
         'css/owlcarousel/owl.theme.default.css',
         'css/fonts.css',
         'css/main.css',
-        'css/project.css',
-        'css/projects.css',
         'css/media.css',
     ];
     public $js = [

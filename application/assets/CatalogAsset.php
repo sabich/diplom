@@ -11,6 +11,7 @@ class CatalogAsset extends \yii\web\AssetBundle {
         'css/lightGallery/lg-fb-comment-box.min.css',
         'css/lightGallery/lg-transitions.min.css',
         'css/lightGallery/lightgallery.css',
+        'css/jquery.flipster.min.css',
         'css/fonts.css',
         'css/main.css',
         'css/project.css',
@@ -28,6 +29,7 @@ class CatalogAsset extends \yii\web\AssetBundle {
         'js/lightgallery/lg-thumbnail.js',
         'js/lightgallery/lg-video.js',
         'js/lightgallery/lg-zoom.js',
+        'js/jquery.flipster.min.js',
         'js/catalog.js',
     ];
     public $depends = [
