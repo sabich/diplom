@@ -4,6 +4,7 @@
  * Date: 11.04.17
  * Time: 19:28
  */
+use yii\helpers\Url;
 ?>
 
 <!-- ORDER -->
@@ -12,15 +13,16 @@
         <h2 class="title_main">Получить консультацию</h2>
         <p class="desc_main">Оставьте свои контактные данные и мы обязательно свяжимся с Вами</p>
         <div class="form_order row">
-            <form action="#">
+            <form id="orderForm" action="<?= Url::to(['site/order']) ?>" method="POST" role="form">
+                <input type="hidden" name="_csrf" value="<?= \Yii::$app->request->csrfToken ?>" />
                 <div class="col-md-3">
-                    <input type="text" name="fio" id="fio" placeholder="Введите Ваше имя">
+                    <input type="text" name="OrderForm[name]" placeholder="Введите Ваше имя">
                 </div>
                 <div class="col-md-3">
-                    <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                    <input type="tel" name="OrderForm[phone]" placeholder="Введите телефон">
                 </div>
                 <div class="col-md-3">
-                    <input type="text" name="city" id="city" list="city_list" placeholder="Город">
+                    <input type="text" name="OrderForm[city]" id="city" list="city_list" placeholder="Город">
                     <datalist name="city_list" id="city_list">
                         <option value="Астана"></option>
                         <option value="Алма-Ата"></option>
@@ -47,7 +49,7 @@
                     </datalist>
                 </div>
                 <div class="col-md-3">
-                    <input type="text" name="project" id="project" list="project_list" placeholder="выберите проект">
+                    <input type="text" name="OrderForm[project]" list="project_list" placeholder="выберите проект">
                     <datalist name="project" id="project_list">
                         <option value="Индивидуальное жилье"></option>
                         <option value="Жилой комплекс"></option>
@@ -55,8 +57,21 @@
                         <option value="Развлекательный комплекс"></option>
                     </datalist>
                 </div>
-        </div>
-                    <input type="submit" name="send_order" class="btn-link btn-order" value="расчитать">
-            </form>
+            </div>
+            <input type="submit" name="send_order" class="btn-link btn-order" value="расчитать">
+        </form>
     </div>
 </section>
+<?php
+if (\Yii::$app->session->hasFlash('orderSuccess')) {
+    $this->registerJs("
+                alert('Ваш запрос отправлен.');
+            ");
+}
+
+if (\Yii::$app->session->hasFlash('orderErrors')) {
+    $this->registerJs("
+                console.log('Order errors:', " . json_encode(\Yii::$app->session->getFlash('orderErrors')) . ");
+            ");
+}
+?>

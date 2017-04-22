@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\forms\CallbackForm;
+use app\models\forms\OrderForm;
 
 class SiteController extends \app\base\Controller
 {
@@ -25,6 +26,21 @@ class SiteController extends \app\base\Controller
                 \Yii::$app->session->setFlash('callbackSuccess', true);
             } else {
                 \Yii::$app->session->setFlash('callbackErrors', $form->errors);
+            }
+        }
+
+        return $this->goBack();
+    }
+
+    public function actionOrder() {
+        if (\Yii::$app->request->isPost) {
+            $form = new OrderForm();
+            $form->load(\Yii::$app->request->post());
+
+            if ($form->run()) {
+                \Yii::$app->session->setFlash('orderSuccess', true);
+            } else {
+                \Yii::$app->session->setFlash('orderErrors', $form->errors);
             }
         }
 
