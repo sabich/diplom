@@ -15,9 +15,9 @@ use yii\helpers\Url;
         <div id="gallery" class="col-md-9">
             <ul id="imageGallery">
                 <?php for ($i=1; $i<=7; $i++) { ?>
-                <li data-thumb="/images/gallery/thumbs/<?= $project->cover.'s'.$i ?>.png"
-                    data-src="/images/gallery/<?= $project->cover.'-'.$i ?>.png">
-                    <img src="/images/gallery/slider/<?= $project->cover.'-'.$i ?>.png" />
+                <li data-thumb="/images/gallery/thrumbs/<?= $project->cover.'-'.$i.'s' ?>.jpg"
+                    data-src="/images/gallery/slider/<?= $project->cover.'-'.$i ?>.jpg">
+                    <img src="/images/gallery/slider/<?= $project->cover.'-'.$i ?>.jpg" />
                 </li>
                 <?php } ?>
             </ul>
@@ -78,7 +78,7 @@ use yii\helpers\Url;
         </div>
         <div class="col-md-3">
             <h3>Смотреть планировки</h3>
-            <img src="/images/gallery/pij123-5.png" width="217" height="270" class="img-responsive">
+            <img src="/images/gallery/thrumbs/123-6s.jpg" width="217" height="270" class="img-responsive">
         </div>
     </div>
 </section>

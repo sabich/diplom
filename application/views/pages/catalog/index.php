@@ -28,7 +28,7 @@ use yii\helpers\Url;
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-title">
-                                    <img class="card-img-top img-responsive" src="/images/projects/small/<?= $project->cover ?>.png" alt="<?= $project->article ?>">
+                                    <img class="card-img-top img-responsive" src="/images/projects/cover/<?= $project->cover.'-266' ?>.jpg" alt="<?= $project->article ?>">
                                     <h4><?= $project->article ?></h4>
                                 </div>
                                 <div class="card-block">
