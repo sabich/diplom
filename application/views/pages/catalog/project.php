@@ -15,9 +15,9 @@ use yii\helpers\Url;
         <div id="gallery" class="col-md-9">
             <ul id="imageGallery">
                 <?php for ($i=1; $i<=7; $i++) { ?>
-                    <li data-thumb="/images/gallery/thrumbs/<?= $project->cover.'-'.$i.'s' ?>.jpg"
-                        data-src="/images/gallery/slider/<?= $project->cover.'-'.$i ?>.jpg">
-                        <img src="/images/gallery/slider/<?= $project->cover.'-'.$i ?>.jpg" />
+                    <li data-thumb="/images/projects/thrumbs/<?= $project->cover.'/'.$project->cover.'-'.$i.'th' ?>.jpg"
+                        data-src="/images/projects/full/<?= $project->cover.'/'.$project->cover.'-'.$i ?>.jpg">
+                        <img src="/images/projects/slider/<?= $project->cover.'/'.$project->cover.'-'.$i.'s' ?>.jpg" />
                     </li>
                 <?php } ?>
             </ul>
@@ -52,7 +52,7 @@ use yii\helpers\Url;
         </div>
         <div class="col-md-3">
             <h3>Смотреть планировки</h3>
-            <img src="/images/gallery/thrumbs/123-6s.jpg" width="217" height="270" class="img-responsive">
+            <img src="/images/projects/thrumbs/123-6s.jpg" width="217" height="270" class="img-responsive">
         </div>
     </div>
 </section>
@@ -64,7 +64,7 @@ use yii\helpers\Url;
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-title">
-                            <img class="card-img-top" src="/images/projects/small/pr1.png" alt="Card image cap">
+                            <img class="card-img-top" src="/images/projects/cover/<?=$similar->cover ?>-266.jpg" alt="<?=$similar->article?>">
                             <h4><?= $similar->article ?></h4>
                         </div>
                         <div class="card-block">
