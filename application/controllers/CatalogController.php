@@ -23,8 +23,17 @@ class CatalogController extends \app\base\Controller {
 
     public function actionProject($id) {
         $project = Project::findOne($id);
+
         if (!$project) throw new NotFoundHttpException('Проект не найден');
 
-        return $this->render('project', ['project' => $project]);
+        return $this->render('project', [
+            'project' => $project,
+            'similarProjects' => Project::find()
+                ->where(['typeId' => $project->typeId])
+                ->andWhere(['!=', 'id', $id])
+                ->orderBy(new \yii\db\Expression('RAND()'))
+                ->limit(3)
+                ->all()
+        ]);
     }
 }
