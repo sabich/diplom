@@ -32,4 +32,9 @@ class Project extends ActiveRecord {
     public function getType() {
         return $this->hasOne(ProjectType::className(), ['id' => 'typeId']);
     }
+
+    // ProjectAttributeValue relation
+    public function getAttributeValues() {
+        return $this->hasMany(ProjectAttributeValue::className(), ['projectId' => 'id'])->with('projectAttribute');
+    }
 }
