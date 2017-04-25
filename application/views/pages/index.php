@@ -15,7 +15,7 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Проект клиники лучевой терапии</h2>
+                    <h2>Клиники лучевой терапии</h2>
                 </div>
                 <div class="slide-text">
                     <p>Планировкой предусмотрено комфортное обслуживание посетителей, с зонами ожидания и лечения.</p>
@@ -54,10 +54,10 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Проект благоустройства территории</h2>
+                    <h2>Благоустройство территории</h2>
                 </div>
                 <div class="slide-text">
-                    <p>Проект дома
+                    <p>Проект парка развлечений
                     </p>
                 </div>
                 <div class="nav_slider text left">
@@ -74,10 +74,10 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Проект автосалона</h2>
+                    <h2>Автосалон</h2>
                 </div>
                 <div class="slide-text">
-                    <p>Проект автосалона с большой автостоянкой</p>
+                    <p>Автосалона с большой автостоянкой</p>
                 </div>
                 <div class="nav_slider text left">
                     <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
@@ -93,11 +93,30 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Проект  ледовой арены</h2>
+                    <h2>Ледовая арена</h2>
                 </div>
                 <div class="slide-text">
                     <p>Проект  ледовой арены представляет собой  сблокированное сооружение из одноэтажной арены. Сооружение в плане имеет Т-образный вид.
                     </p>
+                </div>
+                <div class="nav_slider text left">
+                    <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
+                    <span>|</span>
+                    <span class="btn customNextBtn"><i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i></span>
+                </div>
+                <a href="#order" class="btn-order">Заказать проект</a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/images/slider/image06.jpg" alt="">
+            <div class="item-block">
+                <div class="slide-caption">
+                    <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
+                    <span class="red-line"></span>
+                    <h2>Дом</h2>
+                </div>
+                <div class="slide-text">
+                    <p></p>
                 </div>
                 <div class="nav_slider text left">
                     <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
