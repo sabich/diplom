@@ -17,7 +17,7 @@ use yii\helpers\Url;
                 <?php for ($i=1; $i<=7; $i++) { ?>
                     <li data-thumb="/images/projects/thrumbs/<?= $project->cover.'/'.$project->cover.'-'.$i.'th' ?>.jpg"
                         data-src="/images/projects/full/<?= $project->cover.'/'.$project->cover.'-'.$i ?>.jpg">
-                        <img src="/images/projects/slider/<?= $project->cover.'/'.$project->cover.'-'.$i.'s' ?>.jpg" />
+                        <img src="/images/projects/slider/<?= $project->cover.'/'.$project->cover.'-'.$i.'s' ?>.jpg" class="img-responsive"/>
                     </li>
                 <?php } ?>
             </ul>
