@@ -57,7 +57,7 @@ $this->title = 'ARS Holding';
                     <h2>Благоустройство территории</h2>
                 </div>
                 <div class="slide-text">
-                    <p>Проект парка развлечений
+                    <p>Парк развлечений
                     </p>
                 </div>
                 <div class="nav_slider text left">
@@ -77,7 +77,7 @@ $this->title = 'ARS Holding';
                     <h2>Автосалон</h2>
                 </div>
                 <div class="slide-text">
-                    <p>Автосалона с большой автостоянкой</p>
+                    <p>Автосалон с большой автостоянкой</p>
                 </div>
                 <div class="nav_slider text left">
                     <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
@@ -96,7 +96,7 @@ $this->title = 'ARS Holding';
                     <h2>Ледовая арена</h2>
                 </div>
                 <div class="slide-text">
-                    <p>Проект  ледовой арены представляет собой  сблокированное сооружение из одноэтажной арены. Сооружение в плане имеет Т-образный вид.
+                    <p>Ледовая арена представляет собой  сблокированное сооружение из одноэтажной арены. Сооружение в плане имеет Т-образный вид.
                     </p>
                 </div>
                 <div class="nav_slider text left">
