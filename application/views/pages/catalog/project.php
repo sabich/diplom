@@ -1,6 +1,7 @@
 <?php
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
+use yii\helpers\FileHelper;
 
 ?>
 
@@ -14,7 +15,10 @@ use yii\helpers\Url;
     <div class="row">
         <div id="gallery" class="col-md-9">
             <ul id="imageGallery">
-                <?php for ($i=1; $i<=7; $i++) { ?>
+                <?php
+                $dir=Yii::getAlias('@webroot');
+                $files=FileHelper::findFiles($dir.'/images/projects/thrumbs/'.$project->cover.'/'); ?>
+                <?php for ($i=1; $i<count($files); $i++) { ?>
                     <li data-thumb="/images/projects/thrumbs/<?= $project->cover.'/'.$project->cover.'-'.$i.'th' ?>.jpg"
                         data-src="/images/projects/full/<?= $project->cover.'/'.$project->cover.'-'.$i ?>.jpg">
                         <img src="/images/projects/slider/<?= $project->cover.'/'.$project->cover.'-'.$i.'s' ?>.jpg" class="img-responsive"/>
