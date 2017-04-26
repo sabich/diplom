@@ -55,7 +55,7 @@ use yii\helpers\Url;
                 </div>
             </div>
 
-            <div class="col-md-3"><?= $this->render('chunks/filter') ?></div>
+            <?php if($project->typeId==1) { ?><div class="col-md-3"><?= $this->render('chunks/filter') ?></div><?php } ?>
         </div>
     </div>
 </section>
