@@ -50,10 +50,6 @@ use yii\helpers\Url;
                 <?= $project->description ?>
             </p>
         </div>
-        <div class="col-md-3">
-            <h3>Смотреть планировки</h3>
-            <img src="/images/projects/thrumbs/123-6s.jpg" width="217" height="270" class="img-responsive">
-        </div>
     </div>
 </section>
 
@@ -64,7 +60,7 @@ use yii\helpers\Url;
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-title">
-                            <img class="card-img-top" src="/images/projects/cover/<?=$similar->cover ?>-266.jpg" alt="<?=$similar->article?>">
+                            <img class="card-img-top img-responsive" src="/images/projects/cover/<?=$similar->cover ?>-266.jpg" alt="<?=$similar->article?>">
                             <h4><?= $similar->article ?></h4>
                         </div>
                         <div class="card-block">
