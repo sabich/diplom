@@ -22,6 +22,7 @@ class Project extends ActiveRecord {
             [['typeId'], 'integer'],
             [['date'], 'date', 'format' => 'php:Y-m-d'],
             [['article'], 'string', 'max' => 25],
+            [['article'], 'unique'],
             [['cover'], 'string', 'min' => 32, 'max' => 32],
             [['annotation'], 'string', 'max' => 150],
             [['description'], 'string', 'max' => 2048]

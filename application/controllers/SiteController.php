@@ -5,7 +5,7 @@ namespace app\controllers;
 use app\models\forms\CallbackForm;
 use app\models\forms\OrderForm;
 
-class SiteController extends \app\base\Controller
+class SiteController extends \app\base\FrontController
 {
     public function actionIndex()
     {

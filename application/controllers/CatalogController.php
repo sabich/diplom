@@ -6,7 +6,7 @@ use app\models\Project;
 use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
 
-class CatalogController extends \app\base\Controller {
+class CatalogController extends \app\base\FrontController {
     public $layout = 'catalog';
 
     public function actionIndex($typeId) {

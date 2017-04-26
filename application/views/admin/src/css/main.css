@@ -1,0 +1,97 @@
+/*var*/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: #f5efe9; }
+body p {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */ }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+a, a:visited {
+  text-decoration: none;
+  color: #000; }
+
+a:hover, a:active, a:focus {
+  color: #c0221f;
+  text-decoration: none; }
+
+/*============= HEADER =================*/
+nav {
+  background-color: #e5dacc; }
+  nav .nav .open > a, nav .nav .open > a:focus, nav .nav .open > a:hover {
+    background-color: transparent;
+    border-color: transparent; }
+  nav a, nav a:visited {
+    color: #c0221f;
+    cursor: pointer;
+    text-shadow: none; }
+  nav a:hover, nav a:focus {
+    text-shadow: 2px 1px 1.98px rgba(107, 0, 0, 0.5); }
+
+#header-wrap {
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0; }
+
+#logo-top img {
+  display: block;
+  margin: 0 auto; }
+
+/*
+#phone {
+  line-height: 2em; }
+  #phone a {
+    display: inline-block;
+    padding: 0 10px; }
+*/
+
+#nav-top ul {
+  float: none; }
+  #nav-top ul li {
+    display: inline-block; }
+  #nav-top ul a {
+    font-size: 12px;
+    padding: 15px 10px; }
+  #nav-top ul a:hover, #nav-top ul a:visited {
+    background-color: #f5efe9; }
+  #nav-top ul .dropdown-menu {
+    background-color: #e5dacc; }
+    #nav-top ul .dropdown-menu li {
+      width: 100%; }
+
+/*
+#links {
+  font-size: 22px;
+  padding: 10px 0; }
+  #links i {
+    padding: 0 5px; }
+
+#lang {
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none; }
+*/
+
+/*======================= FOOTER ===========================*/
+footer {
+  padding: 30px 0;
+  background-image: url("../images/bg_footer.png");
+  color: #fff;
+  font-family: "Open Sans";
+  font-weight: lighter;
+  font-size: 14px;
+  text-align: justify; }
