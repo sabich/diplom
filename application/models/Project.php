@@ -18,14 +18,15 @@ class Project extends ActiveRecord {
 
     public function rules() {
         return [
-            [['typeId', 'date', 'article', 'cover', 'annotation', 'description'], 'require'],
+            [['typeId', 'date', 'article', 'annotation', 'description'], 'required'],
             [['typeId'], 'integer'],
             [['date'], 'date', 'format' => 'php:Y-m-d'],
             [['article'], 'string', 'max' => 25],
             [['article'], 'unique'],
-            [['cover'], 'string', 'min' => 32, 'max' => 32],
+            [['coverId'], 'integer'],
+            [['coverId'], 'exist', 'targetClass' => Image::className(), 'targetAttribute' => 'id'],
             [['annotation'], 'string', 'max' => 150],
-            [['description'], 'string', 'max' => 2048]
+            [['description'], 'string', 'max' => 2048],
         ];
     }
 
@@ -37,5 +38,20 @@ class Project extends ActiveRecord {
     // ProjectAttributeValue relation
     public function getAttributeValues() {
         return $this->hasMany(ProjectAttributeValue::className(), ['projectId' => 'id'])->with('projectAttribute');
+    }
+
+    // Cover relation
+    public function getCover() {
+       return $this->hasOne(Image::className(), ['id' => 'coverId']);
+    }
+
+    // Images relation
+    public function getImages() {
+        return $this->hasMany(Image::className(), ['id' => 'imageId'])
+            ->viaTable('project_image', ['projectId' => 'id']);
+    }
+
+    public function addUploadedImage($uploadedImage) {
+
     }
 }
