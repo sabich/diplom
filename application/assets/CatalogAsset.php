@@ -3,7 +3,7 @@
 namespace app\assets;
 
 class CatalogAsset extends \yii\web\AssetBundle {
-    public $sourcePath = '@app/views/src/app-asset';
+    public $sourcePath = '@app/views/src';
     public $baseUrl = '@web';
     public $css = [
         'css/bootstrap-select.min.css',
