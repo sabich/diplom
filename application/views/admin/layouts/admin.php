@@ -33,9 +33,9 @@ AdminAsset::register($this);
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
         </div>
-    </div>
 
-    <?= $content ?>
+        <?= $content ?>
+    </div>
 </main>
 
 <?php $this->endBody() ?>

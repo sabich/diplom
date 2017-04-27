@@ -4,6 +4,8 @@ namespace app\models\forms\admin;
 
 use app\models\Project;
 use app\models\ProjectType;
+use yii\base\Exception;
+use yii\helpers\ArrayHelper;
 
 class ProjectForm extends \yii\base\Model {
     public $id;
@@ -17,7 +19,7 @@ class ProjectForm extends \yii\base\Model {
 
     public function rules() {
         return [
-            [['typeId', 'date', 'article', 'annotation', 'description'], 'require', 'on' => ['add', 'edit']],
+            [['typeId', 'date', 'article', 'annotation', 'description'], 'required', 'on' => ['add', 'edit']],
             [['typeId'], 'integer', 'on' => ['add', 'edit']],
             [['typeId'], 'exist', 'targetClass' => ProjectType::className(), 'targetAttribute' => 'id', 'on' => ['add', 'edit']],
             [['date'], 'date', 'format' => 'php:Y-m-d', 'on' => ['add', 'edit']],
@@ -34,9 +36,41 @@ class ProjectForm extends \yii\base\Model {
 
     public function run() {
         if ($this->validate()) {
-            return true;
+            switch ($this->scenario) {
+                case 'add' :
+                    $project = new Project([
+                        'typeId' => $this->typeId,
+                        'date' => $this->date,
+                        'article' => $this->article,
+                        'annotation' => $this->annotation,
+                        'description' => $this->description,
+                    ]);
+
+                    if (!$project->save()) {
+                        throw new Exception('Can not save project');
+                    }
+
+                    if ($this->cover) {
+
+                    }
+
+                    return true;
+                    break;
+                case 'edit' :
+                    break;
+            }
         }
 
         return false;
+    }
+
+    public function getTypeIdOptions() {
+        return ArrayHelper::map(
+            ProjectType::find()
+                ->orderBy(['name' => SORT_ASC])
+                ->asArray()->all(),
+            'id',
+            'name'
+        );
     }
 }

@@ -3,6 +3,7 @@
 namespace app\controllers\admin;
 
 use app\models\forms\admin\ProjectForm;
+use yii\base\Exception;
 
 class AdminProjectController extends \app\base\AdminController {
     public function actionIndex() {
@@ -17,12 +18,18 @@ class AdminProjectController extends \app\base\AdminController {
         if (\Yii::$app->request->isPost) {
             $form->load(\Yii::$app->request->post());
 
-            if ($form->run()) {
-                return $this->redirect(['admin-project/index']);
+            try {
+                if ($form->run()) {
+                    return $this->redirect(['admin-project/index']);
+                }
+            } catch (Exception $e) {
+                \Yii::$app->session->setFlash('submit-error', $e->getMessage());
             }
         }
 
-        return $this->render('form');
+        return $this->render('form', [
+            'model' => $form
+        ]);
     }
 
     public function actionUpdate($id) {
