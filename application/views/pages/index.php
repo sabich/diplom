@@ -15,10 +15,10 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Клиники лучевой терапии</h2>
+                    <h2>Проектирование клиники лучевой терапии</h2>
                 </div>
                 <div class="slide-text">
-                    <p>Планировкой предусмотрено комфортное обслуживание посетителей, с зонами ожидания и лечения.</p>
+                    <p>Проект, гармонично сочетающий в себе строгие технические и медицинские регламенты с высокой комфортабельностью лечебных помещений.</p>
                 </div>
                 <div class="nav_slider text left">
                     <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
@@ -34,11 +34,10 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Дизайн</h2>
+                    <h2>Дизайн апартаментов</h2>
                 </div>
                 <div class="slide-text">
-                    <p> Утонченный дизайн в аппартаментах.
-                    </p>
+                    <p>Утонченный интерьер частных апартаментов спроектирован с учетом всех правил эргономики жилых пространств.</p>
                 </div>
                 <div class="nav_slider text left">
                     <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
@@ -54,11 +53,10 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Благоустройство территории</h2>
+                    <h2>Проектирование городского парка</h2>
                 </div>
                 <div class="slide-text">
-                    <p>Парк развлечений
-                    </p>
+                    <p>Благоустройство существующей парковой территории и проектирование новых спортивных и этно-культурных зон вносит огромный вклад в улучшение городской инфраструктуры.</p>
                 </div>
                 <div class="nav_slider text left">
                     <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
@@ -74,10 +72,10 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Автосалон</h2>
+                    <h2>Проектирование и строительство автосалона</h2>
                 </div>
                 <div class="slide-text">
-                    <p>Автосалон с большой автостоянкой</p>
+                    <p>Автосалон с просторными торгово-выставочными залами и собственной СТО спроектирован с учетом корпоративных стандартов и имиджа дилерской компании.</p>
                 </div>
                 <div class="nav_slider text left">
                     <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
@@ -96,8 +94,7 @@ $this->title = 'ARS Holding';
                     <h2>Ледовая арена</h2>
                 </div>
                 <div class="slide-text">
-                    <p>Ледовая арена представляет собой  сблокированное сооружение из одноэтажной арены. Сооружение в плане имеет Т-образный вид.
-                    </p>
+                    <p>Спортивный объект с пристроенным административным комплексом спроектирован на 660 зрительских мест и предполагает специальное пространство для посетителей с ограниченными возможностями.</p>
                 </div>
                 <div class="nav_slider text left">
                     <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
@@ -113,10 +110,10 @@ $this->title = 'ARS Holding';
                 <div class="slide-caption">
                     <img class="logo-max" src="/images/logo/logo-max.png" alt="АРС-Холдинг" width="122" height="147">
                     <span class="red-line"></span>
-                    <h2>Дом</h2>
+                    <h2>Частный коттедж</h2>
                 </div>
                 <div class="slide-text">
-                    <p></p>
+                    <p>Дом, ставший органичным дополнением окружающего ландшафта – таков архитектурный концепт двухэтажного коттеджа с просторной мансардой и окнами-витражами.</p>
                 </div>
                 <div class="nav_slider text left">
                     <span class="btn customPrevBtn"><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></span>
