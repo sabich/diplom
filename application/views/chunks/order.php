@@ -25,7 +25,7 @@ use yii\helpers\Url;
                     <input type="text" name="OrderForm[city]" id="city" list="city_list" placeholder="Город">
                     <datalist name="city_list" id="city_list">
                         <option value="Астана"></option>
-                        <option value="Алма-Ата"></option>
+                        <option value="Алмата"></option>
                         <option value="Актау"></option>
                         <option value="Актобе"></option>
                         <option value="Атырау"></option>
