@@ -28,7 +28,13 @@
                 </address>
             </div>
             <div class="col-md-4">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4tr2Q87NSqrTZfaOUJvP1ZZkps-LlN1X&amp;width=100%25&amp;height=250&amp;lang=ru_RU&amp;scroll=true"></script>
+                <a class="dg-widget-link" href="http://2gis.kz/almaty/firm/70000001027050025/center/76.91652774810792,43.21083746718322/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Алматы</a>
+                <div class="dg-widget-link">
+                    <a href="http://2gis.kz/almaty/center/76.916531,43.210836/zoom/16/routeTab/rsType/bus/to/76.916531,43.210836╎ARS Holding, ООО, проектно-строительная компания?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до ARS Holding, ООО, проектно-строительная компания</a>
+                </div>
+                <script charset="utf-8" src="http://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+                <script charset="utf-8">new DGWidgetLoader({"width":"100%","height":400,"borderColor":"#a3a3a3","pos":{"lat":43.21083746718322,"lon":76.91652774810792,"zoom":16},"opt":{"city":"almaty"},"org":[{"id":"70000001027050025"}]});</script>
+                <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
             </div>
         </div>
         <hr>
