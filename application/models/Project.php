@@ -3,7 +3,9 @@
 namespace app\models;
 
 use app\base\ActiveRecord;
-use yii\db\Query;
+use yii\base\Exception;
+use yii\helpers\FileHelper;
+use yii\imagine\Image as Imagine;
 
 class Project extends ActiveRecord {
     const TYPE_INDIVIDUAL = 1;
@@ -51,7 +53,79 @@ class Project extends ActiveRecord {
             ->viaTable('project_image', ['projectId' => 'id']);
     }
 
-    public function addUploadedImage($uploadedImage) {
+    // Images
+    const IMAGE_SIZE_ORIGIN = null;
+    const IMAGE_COVER_SIZE = [266, 260];
+    const IMAGE_SLIDER_SIZE = [900, 480];
+    const IMAGE_THUMB_SIZE = [150, 80];
 
+    public function addUploadedImage($uploadedImage, $cover = false) {
+        if (!$this->id) {
+            throw new Exception("Can not create photo. Project not saved.");
+        }
+
+        $fileDir = \Yii::getAlias("@webroot/images/projects/{$this->id}/");
+        $fileName = \Yii::$app->security->generateRandomString();
+
+        $originName = $fileDir . $fileName . '.jpg';
+        $coverFileName = $fileDir . $fileName . '_' . self::IMAGE_COVER_SIZE[0] . '_' . self::IMAGE_COVER_SIZE[1] . '.jpg';
+        $sliderFileName = $fileDir . $fileName . '_' . self::IMAGE_SLIDER_SIZE[0] . '_' . self::IMAGE_SLIDER_SIZE[1] . '.jpg';
+        $thumbFileName = $fileDir . $fileName . '_' . self::IMAGE_THUMB_SIZE[0] . '_' . self::IMAGE_THUMB_SIZE[1] . '.jpg';
+        $watermark = \Yii::getAlias('@webroot/images/watermark.png');
+
+        FileHelper::createDirectory($fileDir, 0777);
+        $originImage = Imagine::getImagine()->open($uploadedImage->tempName);
+        $coverImage = Imagine::thumbnail($originImage, self::IMAGE_COVER_SIZE[0], self::IMAGE_COVER_SIZE[1]);
+        $sliderImage = Imagine::thumbnail($originImage, self::IMAGE_SLIDER_SIZE[0], self::IMAGE_SLIDER_SIZE[1]);
+        $thumbImage = Imagine::thumbnail($originImage, self::IMAGE_THUMB_SIZE[0], self::IMAGE_THUMB_SIZE[1]);
+
+        Imagine::watermark($originImage, $watermark, [0, 0]);
+        Imagine::watermark($coverImage, $watermark, [0, 0]);
+        Imagine::watermark($sliderImage, $watermark, [0, 0]);
+        //Imagine::watermark($thumbImage, $watermark, [0, 0]);
+
+        $originImage->save($originName);
+        $coverImage->save($coverFileName);
+        $sliderImage->save($sliderFileName);
+        $thumbImage->save($thumbFileName);
+
+        $image = new Image(['filename' => $fileName]);
+
+        if (!$image->save()) {
+            throw new Exception('Can not save project image');
+        }
+
+        \Yii::$app->db->createCommand()->insert('project_image', ['projectId' => $this->id, 'imageId' => $image->id])->execute();
+
+        if ($cover) {
+            $this->coverId = $image->id;
+            if (!$this->save()) {
+                throw new Exception('Can not update project cover');
+            };
+        }
+    }
+
+    public function getCoverUrl($size = self::IMAGE_THUMB_SIZE) {
+        if ($this->id) {
+            if (empty($size)) {
+                return \Yii::getAlias("@web/images/projects/{$this->id}/{$this->cover->filename}.jpg");
+            } else {
+                return \Yii::getAlias("@web/images/projects/{$this->id}/{$this->cover->filename}_{$size[0]}_{$size[1]}.jpg");
+            }
+        }
+
+        return null;
+    }
+
+    public function getImageUrl($image, $size = self::IMAGE_THUMB_SIZE) {
+        if ($this->id) {
+            if (empty($size)) {
+                return \Yii::getAlias("@web/images/projects/{$this->id}/{$image->filename}.jpg");
+            } else {
+                return \Yii::getAlias("@web/images/projects/{$this->id}/{$image->filename}_{$size[0]}_{$size[1]}.jpg");
+            }
+        }
+
+        return null;
     }
 }

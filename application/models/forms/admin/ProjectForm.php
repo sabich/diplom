@@ -30,7 +30,9 @@ class ProjectForm extends \yii\base\Model {
             [['article'], 'unique', 'targetClass' => Project::className(), 'on' => ['add']],
 
             [['id'], 'required', 'on' => ['edit']],
-            [['article'], 'unique', 'targetClass' => Project::className(), 'filter' => ['!=', 'id', $this->id], 'on' => ['edit']]
+            [['article'], 'unique', 'targetClass' => Project::className(), 'filter' => ['!=', 'id', $this->id], 'on' => ['edit']],
+
+            [['cover'], 'image'],
         ];
     }
 
@@ -51,7 +53,7 @@ class ProjectForm extends \yii\base\Model {
                     }
 
                     if ($this->cover) {
-
+                        $project->addUploadedImage($this->cover, true);
                     }
 
                     return true;

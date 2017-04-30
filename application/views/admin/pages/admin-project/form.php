@@ -16,7 +16,9 @@ $this->params['breadcrumbs'] = [
         <?php } ?>
 
         <?php $form = ActiveForm::begin([
-
+            'options' => [
+                'enctype' => 'multipart/form-data'
+            ]
         ]) ?>
 
             <?= $form->field($model, 'typeId')->dropDownList(
@@ -27,6 +29,8 @@ $this->params['breadcrumbs'] = [
             <?= $form->field($model, 'date') ?>
 
             <?= $form->field($model, 'article') ?>
+
+            <?= $form->field($model, 'cover')->widget(\kartik\file\FileInput::className(), []) ?>
 
             <?= $form->field($model, 'annotation')->textarea() ?>
 
