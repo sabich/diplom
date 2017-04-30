@@ -3,6 +3,7 @@
 namespace app\base;
 
 use yii\behaviors\TimestampBehavior;
+use yii\db\BaseActiveRecord;
 
 class ActiveRecord extends \yii\db\ActiveRecord {
     public $timestampBehavior = true;
@@ -21,11 +22,11 @@ class ActiveRecord extends \yii\db\ActiveRecord {
                 }
 
                 if (!isset($this->timestampBehavior['createdAtAttribute'])) {
-                    $this->timestampBehavior['createdAttribute'] = 'created';
+                    $this->timestampBehavior['createdAtAttribute'] = 'created';
                 }
 
                 if (!isset($this->timestampBehavior['updatedAtAttribute'])) {
-                    $this->timestampBehavior['updatedAttribute'] = 'updated';
+                    $this->timestampBehavior['updatedAtAttribute'] = 'updated';
                 }
             }
 

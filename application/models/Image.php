@@ -4,7 +4,7 @@ namespace app\models;
 
 class Image extends \app\base\ActiveRecord {
     // ActiveRecord
-    public $timestamp = [
+    public $timestampBehavior = [
         'updatedAtAttribute' => false
     ];
 

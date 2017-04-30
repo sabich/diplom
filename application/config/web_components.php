@@ -25,9 +25,9 @@ return [
         'enablePrettyUrl' => true,
         'showScriptName' => false,
         'rules' => [
-            'admin' => 'admin-project/index',
-            'admin/<controller>' => 'admin-<controller>/index',
-            'admin/<controller>/<action>' => 'admin-<controller>/<action>'
+            'admin/' => 'admin-project/index',
+            'admin/<controller>/' => 'admin-<controller>/index',
+            'admin/<controller>/<action>/' => 'admin-<controller>/<action>'
         ],
     ],
     'request' => [
