@@ -2,12 +2,20 @@
 
 namespace app\controllers\admin;
 
+use app\models\forms\admin\ProjectFilter;
 use app\models\forms\admin\ProjectForm;
 use yii\base\Exception;
+use yii\web\UploadedFile;
 
 class AdminProjectController extends \app\base\AdminController {
     public function actionIndex() {
+        $filter = new ProjectFilter();
+        $filter->load(\Yii::$app->request->get());
 
+        return $this->render('list', [
+            'filter' => $filter,
+            'provider' => $filter->provider
+        ]);
     }
 
     public function actionCreate() {
