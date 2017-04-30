@@ -22,7 +22,7 @@ class ProjectFilter extends \yii\base\Model {
     public function getProvider() {
         $this->validate();
 
-        $query = Project::find()->orderBy(['date' => SORT_DESC]);
+        $query = Project::find()->orderBy(['date' => SORT_DESC])->with(['type', 'cover']);
 
         if ($this->typeId && !$this->hasErrors('typeId')) {
             $query->andWhere(['typeId' => $this->typeId]);
