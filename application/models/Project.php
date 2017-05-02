@@ -79,9 +79,9 @@ class Project extends ActiveRecord {
         $sliderImage = Imagine::thumbnail($originImage, self::IMAGE_SLIDER_SIZE[0], self::IMAGE_SLIDER_SIZE[1]);
         $thumbImage = Imagine::thumbnail($originImage, self::IMAGE_THUMB_SIZE[0], self::IMAGE_THUMB_SIZE[1]);
 
-        Imagine::watermark($originImage, $watermark, [0, 0]);
-        Imagine::watermark($coverImage, $watermark, [0, 0]);
-        Imagine::watermark($sliderImage, $watermark, [0, 0]);
+        //Imagine::watermark($originImage, $watermark, [0, 0]);
+        //Imagine::watermark($coverImage, $watermark, [0, 0]);
+        //Imagine::watermark($sliderImage, $watermark, [0, 0]);
         //Imagine::watermark($thumbImage, $watermark, [0, 0]);
 
         $originImage->save($originName);
@@ -106,7 +106,7 @@ class Project extends ActiveRecord {
     }
 
     public function getCoverUrl($size = self::IMAGE_THUMB_SIZE) {
-        if ($this->id) {
+        if ($this->id && $this->cover != null) {
             if (empty($size)) {
                 return \Yii::getAlias("@web/images/projects/{$this->id}/{$this->cover->filename}.jpg");
             } else {
