@@ -102,3 +102,66 @@
     text-align: center; }
     #filtr button[type="reset"] {
       color: #512c00; }
+/*========Menu===========*/
+#nav_designs {
+  background-color: #f5efe9 !important; }
+#nav_designs .nav-pills > li > a {
+  border-radius: 0; }
+#nav_designs .nav-pills > li.active > a, #nav_designs .nav-pills > li.active > a:hover, #nav_designs .nav-pills > li.active > a:focus {
+  color: #c0221f;
+  background-color: transparent;
+  border: 1px solid; }
+#nav_designs ul {
+  background-color: #f5efe9; }
+#nav_designs ul li {
+  border-left: 2px solid #e5dacc; }
+#nav_designs ul li:last-child {
+  border-right: 2px solid #e5dacc; }
+#nav_designs ul li a:hover {
+  background-color: #e5dacc;
+  border-radius: none; }
+
+#design_cards .card {
+  color: #fff;
+  margin: 15px 0; }
+#design_cards .card .card-top {
+  position: relative; }
+#design_cards .card .card-top img {
+  margin: auto;
+  width: 100%; }
+#design_cards .card .card-top a {
+  color: #fff;
+  cursor: pointer; }
+#design_cards .card .card-top a:hover {
+  background-color: transparent;
+  color: #c0221f; }
+#design_cards .card .card-block {
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 30px;
+  width: 100%; }
+#design_cards .card .card-block .card-title h4 {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 24px;
+  color: #fff; }
+#design_cards .card .card-text {
+  font-family: 'SansSerif';
+  font-weight: normal;
+  font-size: 14px; }
+#design_cards .card .card-bottom {
+  padding-top: 10px; }
+
+#design_cards .pagination > li > a {
+  margin: 0 20px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #512c00;
+  border-color: #e5dacc;
+  background-color: #f5efe9; }

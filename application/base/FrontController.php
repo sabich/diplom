@@ -32,6 +32,24 @@ class FrontController extends \app\base\Controller {
                 ],
                 [
                     'label' => 'Дизайн',
+                    'items' => [
+                        [
+                            'label' => 'Индивидуальное жилье',
+                            'url' => ['design/index', 'typeId'=>'1'],
+                        ],
+                        [
+                            'label' => 'Жилые комплексы',
+                            'url' => ['design/index', 'typeId'=>'2'],
+                        ],
+                        [
+                            'label' => 'Промышленные объекты',
+                            'url' => ['design/index', 'typeId'=>'3'],
+                        ],
+                        [
+                            'label' => 'Развлекательные комплексы',
+                            'url' => ['design/index', 'typeId'=>'4'],
+                        ]
+                    ]
                 ],
                 [
                     'label' => 'Услуги',
