@@ -17,6 +17,7 @@ class CatalogController extends \app\base\FrontController {
                 'pageSize' => 9
             ]
         ]);
+        if ($provider->totalCount==0) throw new NotFoundHttpException('Проекты не найдены');
 
         return $this->render('index', ['projectsProvider' => $provider]);
     }
