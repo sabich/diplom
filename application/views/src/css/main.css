@@ -18,13 +18,10 @@ select {
   -moz-appearance: none;
   appearance: none; }
 
-a, a:visited {
-  text-decoration: none;
-  color: #000; }
-
-a:hover, a:active, a:focus {
-  color: #c0221f;
-  text-decoration: none; }
+a, a:visited, a:hover, a:active, a:focus {
+  color: #c0221f !important;
+  text-decoration: none; !important;
+  cursor: pointer; !important; }
 
 /*============= HEADER =================*/
 nav {
