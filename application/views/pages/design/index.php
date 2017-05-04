@@ -4,6 +4,10 @@ use yii\bootstrap\Nav;
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
 
+
+$this->params['breadcrumbs'] = [
+    ['label' => 'Проекты']
+]
 ?>
 
 <section class="contaner-fluid">

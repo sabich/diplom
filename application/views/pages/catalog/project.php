@@ -3,6 +3,11 @@ use yii\widgets\LinkPager;
 use yii\helpers\Url;
 use yii\helpers\FileHelper;
 
+
+$this->params['breadcrumbs'] = [
+    ['label' => $project->type->name, 'url' => ['catalog/index', 'typeId'=>$project->type->id]],
+    ['label' => 'Проект '. $project->article ],
+]
 ?>
 
 <section id=project_nav>
