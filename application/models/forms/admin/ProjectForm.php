@@ -16,6 +16,25 @@ class ProjectForm extends \yii\base\Model {
     public $description;
 
     public $cover;
+    public $images;
+
+    private $_project;
+
+    public function setProject($project) {
+        if ($project) {
+            $this->id = $project->id;
+            $this->typeId = $project->typeId;
+            $this->date = $project->date;
+            $this->article = $project->article;
+            $this->annotation = $project->annotation;
+            $this->description = $project->description;
+            $this->_project = $project;
+        }
+    }
+
+    public function getProject() {
+        return $this->_project;
+    }
 
     public function rules() {
         return [
@@ -32,7 +51,8 @@ class ProjectForm extends \yii\base\Model {
             [['id'], 'required', 'on' => ['edit']],
             [['article'], 'unique', 'targetClass' => Project::className(), 'filter' => ['!=', 'id', $this->id], 'on' => ['edit']],
 
-            [['cover'], 'image'],
+            [['cover'], 'image', 'on' => ['add', 'edit']],
+            [['images'], 'image', 'on' => ['add', 'edit']],
         ];
     }
 
@@ -59,6 +79,19 @@ class ProjectForm extends \yii\base\Model {
                     return true;
                     break;
                 case 'edit' :
+                    $this->_project->typeId = $this->typeId;
+                    $this->_project->date = $this->date;
+                    $this->_project->article = $this->article;
+                    $this->_project->annotation = $this->annotation;
+                    $this->_project->description = $this->description;
+
+                    if (!$this->_project->save()) {
+                        throw new Exception('Can not save project');
+                    }
+
+                    if ($this->cover) {
+                        $this->_project->addUploadedImage($this->cover, true);
+                    }
                     break;
             }
         }

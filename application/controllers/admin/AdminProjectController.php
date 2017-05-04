@@ -4,6 +4,7 @@ namespace app\controllers\admin;
 
 use app\models\forms\admin\ProjectFilter;
 use app\models\forms\admin\ProjectForm;
+use app\models\Project;
 use yii\base\Exception;
 use yii\web\UploadedFile;
 
@@ -44,15 +45,36 @@ class AdminProjectController extends \app\base\AdminController {
     public function actionUpdate($id) {
         $form = new ProjectForm([
             'scenario' => 'edit',
-            'id' => $id
+            'project' => Project::findOne($id)
+        ]);
+
+        if (!$form->project) {
+            \Yii::$app->session->setFlash('submit-error', 'Проект не найден');
+            return $this->redirect(['admin-project/index']);
+        }
+
+        if (\Yii::$app->request->isPost) {
+            $form->load(\Yii::$app->request->post());
+            $form->cover = UploadedFile::getInstance($form, 'cover');
+            $form->images = UploadedFile::getInstance($form, 'images');
+
+            try {
+                if ($form->run()) {
+                    return $this->redirect(['admin-project/index']);
+                }
+            } catch (Exception $e) {
+                \Yii::$app->session->setFlash('submit-error', $e->getMessage());
+            }
+        }
+
+        return $this->render('form', [
+            'model' => $form
         ]);
     }
 
-    public function actionDelete() {
+    public function actionDelete($id) {
+        Project::deleteAll(['id' => $id]);
 
-    }
-
-    public function addImage() {
-
+        return $this->redirect(['admin-project/index']);
     }
 }
