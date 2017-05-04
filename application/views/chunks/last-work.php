@@ -22,33 +22,33 @@ use yii\helpers\Url;
                 <div id="coverflow">
                     <ul class="flip-items">
                         <li>
-                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="/images/works/work-1.png" alt="works">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 21]) ?>">
+                                <img src="/images/works/105w.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="/images/works/work-2.png" alt="works">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 26]) ?>">
+                                <img src="/images/works/114w.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="/images/works/work-3.png" alt="works">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 27]) ?>">
+                                <img src="/images/works/120w.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="/images/works/work-4.png" alt="works">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 7]) ?>">
+                                <img src="/images/works/131w.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="/images/works/work-5.png" alt="works">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 9]) ?>">
+                                <img src="/images/works/138w.png" alt="works">
                             </a>
                         </li>
                         <li>
-                            <a href="<?= Url::to(['catalog/project', 'id' => 1]) ?>">
-                                <img src="/images/works/work-6.png" alt="works">
+                            <a href="<?= Url::to(['catalog/project', 'id' => 11]) ?>">
+                                <img src="/images/works/142w.png" alt="works">
                             </a>
                         </li>
                     </ul>
