@@ -52,7 +52,7 @@ class ProjectForm extends \yii\base\Model {
             [['article'], 'unique', 'targetClass' => Project::className(), 'filter' => ['!=', 'id', $this->id], 'on' => ['edit']],
 
             [['cover'], 'image', 'on' => ['add', 'edit']],
-            [['images'], 'image', 'on' => ['add', 'edit']],
+            [['images'], 'image', 'maxFiles' => 0, 'on' => ['add', 'edit']],
         ];
     }
 
@@ -76,6 +76,12 @@ class ProjectForm extends \yii\base\Model {
                         $project->addUploadedImage($this->cover, true);
                     }
 
+                    if ($this->images) {
+                        foreach ($this->images as $image) {
+                            $project->addUploadedImage($image);
+                        }
+                    }
+
                     return true;
                     break;
                 case 'edit' :
@@ -92,6 +98,13 @@ class ProjectForm extends \yii\base\Model {
                     if ($this->cover) {
                         $this->_project->addUploadedImage($this->cover, true);
                     }
+
+                    if ($this->images) {
+                        foreach ($this->images as $image) {
+                            $this->_project->addUploadedImage($image);
+                        }
+                    }
+
                     break;
             }
         }

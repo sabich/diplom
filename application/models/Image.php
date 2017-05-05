@@ -19,4 +19,12 @@ class Image extends \app\base\ActiveRecord {
             [['filename'], 'unique']
         ];
     }
+
+    public static function generateFilename() {
+        do {
+            $filename = \Yii::$app->security->generateRandomString();
+        } while (self::find()->where(['filename' => $filename])->exists());
+
+        return $filename;
+    }
 }

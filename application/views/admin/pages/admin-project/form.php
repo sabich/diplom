@@ -34,11 +34,9 @@ $this->params['breadcrumbs'] = [
 
             <?= $form->field($model, 'article') ?>
 
-            <?= $form->field($model, 'cover')->widget(\kartik\file\FileInput::className(), []) ?>
-
-            <?= $form->field($model, 'images')->widget(\kartik\file\FileInput::className(), [
+            <?= $form->field($model, 'cover')->widget(\kartik\file\FileInput::className(), [
                 'options' => [
-                    'multiple' => true
+                    'accept' => 'image/jpg, image/jpeg, image/png'
                 ]
             ]) ?>
 
@@ -47,6 +45,13 @@ $this->params['breadcrumbs'] = [
                     <img src="<?= $model->project->coverUrl ?>" />
                 </div>
             <?php } ?>
+
+            <?= $form->field($model, 'images[]')->widget(\kartik\file\FileInput::className(), [
+                'options' => [
+                    'multiple' => true,
+                    'accept' => 'image/jpg, image/jpeg, image/png'
+                ]
+            ]) ?>
 
             <?= $form->field($model, 'annotation')->textarea() ?>
 

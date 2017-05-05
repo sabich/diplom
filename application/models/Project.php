@@ -50,7 +50,8 @@ class Project extends ActiveRecord {
     // Images relation
     public function getImages() {
         return $this->hasMany(Image::className(), ['id' => 'imageId'])
-            ->viaTable('project_image', ['projectId' => 'id']);
+            ->viaTable('project_image', ['projectId' => 'id'])
+            ->where(['!=', 'id', $this->coverId]);
     }
 
     // Images
@@ -65,7 +66,7 @@ class Project extends ActiveRecord {
         }
 
         $fileDir = \Yii::getAlias("@webroot/images/projects/{$this->id}/");
-        $fileName = $this->coverId ? $this->cover->filename : \Yii::$app->security->generateRandomString();
+        $fileName = Image::generateFilename();
 
         $originName = $fileDir . $fileName . '.jpg';
         $coverFileName = $fileDir . $fileName . '_' . self::IMAGE_COVER_SIZE[0] . '_' . self::IMAGE_COVER_SIZE[1] . '.jpg';
@@ -89,7 +90,34 @@ class Project extends ActiveRecord {
         $sliderImage->save($sliderFileName);
         $thumbImage->save($thumbFileName);
 
-        if (!$this->coverId) {
+        if ($cover) {
+            if ($this->coverId) {
+                unlink($fileDir . $this->cover->filename . '.jpg');
+                unlink($fileDir . $this->cover->filename . '_' . self::IMAGE_COVER_SIZE[0] . '_' . self::IMAGE_COVER_SIZE[1] . '.jpg');
+                unlink($fileDir . $this->cover->filename . '_' . self::IMAGE_SLIDER_SIZE[0] . '_' . self::IMAGE_SLIDER_SIZE[1] . '.jpg');
+                unlink($fileDir . $this->cover->filename . '_' . self::IMAGE_THUMB_SIZE[0] . '_' . self::IMAGE_THUMB_SIZE[1] . '.jpg');
+
+                $this->cover->filename = $fileName;
+
+                if (!$this->cover->save()) {
+                    throw new Exception('Can not update project cover');
+                }
+            } else {
+                $image = new Image(['filename' => $fileName]);
+
+                if (!$image->save()) {
+                    throw new Exception('Can not save project image');
+                }
+
+                \Yii::$app->db->createCommand()->insert('project_image', ['projectId' => $this->id, 'imageId' => $image->id])->execute();
+
+                $this->coverId = $image->id;
+
+                if (!$this->save()) {
+                    throw new Exception('Can not update project');
+                }
+            }
+        } else {
             $image = new Image(['filename' => $fileName]);
 
             if (!$image->save()) {
@@ -97,13 +125,6 @@ class Project extends ActiveRecord {
             }
 
             \Yii::$app->db->createCommand()->insert('project_image', ['projectId' => $this->id, 'imageId' => $image->id])->execute();
-
-            if ($cover) {
-                $this->coverId = $image->id;
-                if (!$this->save()) {
-                    throw new Exception('Can not update project cover');
-                };
-            }
         }
     }
 

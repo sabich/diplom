@@ -20,14 +20,20 @@ $this->params['breadcrumbs'] = [
     <div class="row">
         <div id="gallery" class="col-md-9">
             <ul id="imageGallery">
-                <?php
-                $dir=Yii::getAlias('@webroot');
-                $files=FileHelper::findFiles($dir.'/images/projects/thrumbs/'.$project->cover.'/'); ?>
-                <?php for ($i=1; $i<count($files); $i++) { ?>
-                    <li data-thumb="/images/projects/thrumbs/<?= $project->cover.'/'.$project->cover.'-'.$i.'th' ?>.jpg"
-                        data-src="/images/projects/full/<?= $project->cover.'/'.$project->cover.'-'.$i ?>.jpg">
-                        <img src="/images/projects/slider/<?= $project->cover.'/'.$project->cover.'-'.$i.'s' ?>.jpg" class="img-responsive"/>
+                <?php if ($project->cover) { ?>
+                    <li data-thumb="<?= $project->coverUrl ?>"
+                        data-src="<?= $project->getCoverUrl(\app\models\Project::IMAGE_SIZE_ORIGIN) ?>">
+                        <img src="<?= $project->getCoverUrl(\app\models\Project::IMAGE_SLIDER_SIZE) ?>" class="img-responsive"/>
                     </li>
+                <?php } ?>
+
+                <?php if ($project->images) { ?>
+                    <?php foreach ($project->images as $image) { ?>
+                        <li data-thumb="<?= $project->getImageUrl($image) ?>"
+                            data-src="<?= $project->getImageUrl($image, \app\models\Project::IMAGE_SIZE_ORIGIN) ?>">
+                            <img src="<?= $project->getImageUrl($image, \app\models\Project::IMAGE_SLIDER_SIZE) ?>" class="img-responsive"/>
+                        </li>
+                    <?php } ?>
                 <?php } ?>
             </ul>
         </div>
@@ -69,7 +75,7 @@ $this->params['breadcrumbs'] = [
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-title">
-                            <img class="card-img-top img-responsive" src="/images/projects/cover/<?=$similar->cover ?>-266.jpg" alt="<?=$similar->article?>">
+                            <img class="card-img-top img-responsive" src="<?= $similar->getCoverUrl(\app\models\Project::IMAGE_COVER_SIZE) ?>" alt="<?=$similar->article?>">
                             <h4><?= $similar->article ?></h4>
                         </div>
                         <div class="card-block">
