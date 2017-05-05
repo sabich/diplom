@@ -1,12 +1,20 @@
 <?php
 
+/**
+ * @var $projectType \app\models\ProjectType
+ */
+
 use yii\bootstrap\Nav;
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
 
-$this->params['breadcrumbs'] = [
-    ['label' => 'Проекты']
-]
+$this->params['breadcrumbs'] = [];
+if ($projectType) {
+    $this->params['breadcrumbs'][] = ['label' => 'Проекты', 'url' => ['catalog/index']];
+    $this->params['breadcrumbs'][] = ['label' => $projectType->name];
+} else {
+    $this->params['breadcrumbs'][] = ['label' => 'Проекты'];
+}
 ?>
 
 <section class="contaner-fluid">
@@ -31,7 +39,7 @@ $this->params['breadcrumbs'] = [
                         <div class="col-md-4">
                             <div class="card">
                                 <div class="card-title">
-                                    <img class="card-img-top img-responsive" src="/images/projects/cover/<?= $project->cover.'-266' ?>.jpg" alt="<?= $project->article ?>">
+                                    <img class="card-img-top img-responsive" src="<?= $project->getCoverUrl(\app\models\Project::IMAGE_COVER_SIZE) ?>" alt="<?= $project->article ?>">
                                     <h4><?= $project->article ?></h4>
                                 </div>
                                 <div class="card-block">

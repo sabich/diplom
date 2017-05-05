@@ -3,23 +3,45 @@
 namespace app\controllers;
 
 use app\models\Project;
+use app\models\ProjectType;
+use yii\base\Exception;
 use yii\data\ActiveDataProvider;
+use yii\helpers\Url;
 use yii\web\NotFoundHttpException;
 
 class CatalogController extends \app\base\FrontController {
     public $layout = 'catalog';
 
-    public function actionIndex($typeId) {
+    public function actionIndex($typeId = null) {
+        if ($typeId) {
+            if ($type = ProjectType::findOne($typeId)) {
+                $provider = new ActiveDataProvider([
+                    'query' => Project::find()->where(['typeId' => $typeId]),
+                    'pagination' => [
+                        'pageSize' => 9
+                    ]
+                ]);
+
+                return $this->render('index', [
+                    'projectsProvider' => $provider,
+                    'projectType' => $type
+                ]);
+            }
+
+            throw new NotFoundHttpException();
+        }
+
         $provider = new ActiveDataProvider([
-//            'query' => Project::find()->where(['typeId' => $typeId])->orderBy(['id'=>SORT_DESC]),
-            'query' => Project::find()->where(['typeId' => $typeId]),
+            'query' => Project::find(),
             'pagination' => [
                 'pageSize' => 9
             ]
         ]);
-        if ($provider->totalCount==0) throw new NotFoundHttpException('Проекты не найдены');
 
-        return $this->render('index', ['projectsProvider' => $provider]);
+        return $this->render('index', [
+            'projectsProvider' => $provider,
+            'projectType' => null
+        ]);
     }
 
     public function actionProject($id) {
