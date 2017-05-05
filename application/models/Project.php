@@ -108,26 +108,22 @@ class Project extends ActiveRecord {
     }
 
     public function getCoverUrl($size = self::IMAGE_THUMB_SIZE) {
-        if ($this->id && $this->cover != null) {
-            if (empty($size)) {
-                return \Yii::getAlias("@web/images/projects/{$this->id}/{$this->cover->filename}.jpg");
-            } else {
-                return \Yii::getAlias("@web/images/projects/{$this->id}/{$this->cover->filename}_{$size[0]}_{$size[1]}.jpg");
-            }
+        $size = empty($size) ? '' : "_{$size[0]}_{$size[1]}";
+
+        if ($this->id && $this->cover) {
+            return \Yii::getAlias("@web/images/projects/{$this->id}/{$this->cover->filename}{$size}.jpg");
         }
 
-        return null;
+        return \Yii::getAlias("@web/images/projects/default{$size}.jpg");
     }
 
     public function getImageUrl($image, $size = self::IMAGE_THUMB_SIZE) {
+        $size = empty($size) ? '' : "_{$size[0]}_{$size[1]}";
+
         if ($this->id) {
-            if (empty($size)) {
-                return \Yii::getAlias("@web/images/projects/{$this->id}/{$image->filename}.jpg");
-            } else {
-                return \Yii::getAlias("@web/images/projects/{$this->id}/{$image->filename}_{$size[0]}_{$size[1]}.jpg");
-            }
+            return \Yii::getAlias("@web/images/projects/{$this->id}/{$image->filename}{$size}.jpg");
         }
 
-        return null;
+        return \Yii::getAlias("@web/images/projects/default{$size}.jpg");
     }
 }
