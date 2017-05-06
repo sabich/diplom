@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-class ProjectType extends \app\base\Activerecord {
+class ProjectType extends \app\base\ActiveRecord {
     // ActiveRecord
     public $timestampBehavior = false;
 
