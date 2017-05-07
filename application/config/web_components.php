@@ -6,6 +6,9 @@ return [
         'identityClass' => false,
         'enableAutoLogin' => true
     ],
+    'cache' => [
+        'class' => 'yii\caching\FileCache',
+    ],
     'mailer' => [
         'class' => 'yii\swiftmailer\Mailer',
         'useFileTransport' => false,
