@@ -57,50 +57,50 @@
   border-color: #e5dacc;
   background-color: #f5efe9; }
 
-#filtr {
+#projectsFilter {
   margin-top: 30px; }
-  #filtr a, #filtr button {
+  #projectsFilter a, #projectsFilter button {
     color: #c0221f;
     background-color: #e5dacc;
     text-align: left;
     font-size: 24px;
     border-radius: 0; }
-  #filtr .list-group-item {
+  #projectsFilter .list-group-item {
     border-radius: 0; }
-  #filtr .panel {
+  #projectsFilter .panel {
     box-shadow: none;
     border-radius: 0;
     border-bottom: 2px solid #e5dacc;
     margin: 0; }
-    #filtr .panel label {
+    #projectsFilter .panel label {
       color: #512c00;
       font-size: 18px; }
-      #filtr .panel label .chBox {
+      #projectsFilter .panel label .chBox {
         display: block;
         width: 22px;
         height: 22px;
         float: left;
         border: 2px solid #f5efe9;
         margin-right: 20px; }
-        #filtr .panel label .chBox:after {
+        #projectsFilter .panel label .chBox:after {
           content: '';
           position: absolute; }
-      #filtr .panel label > input[type="checkbox"] {
+      #projectsFilter .panel label > input[type="checkbox"] {
         position: relative;
         display: none; }
-        #filtr .panel label > input[type="checkbox"]:checked + .chBox:after {
+        #projectsFilter .panel label > input[type="checkbox"]:checked + .chBox:after {
           font-family: 'FontAwesome';
           content: '\f00c';
           position: absolute;
           top: 10px;
           left: 18px;
           color: #c0221f; }
-  #filtr button {
+  #projectsFilter button {
     font-size: 18px;
     padding: 0;
     margin-top: 3px;
     text-align: center; }
-    #filtr button[type="reset"] {
+    #projectsFilter button[type="reset"] {
       color: #512c00; }
 /*========Menu===========*/
 #nav_designs {

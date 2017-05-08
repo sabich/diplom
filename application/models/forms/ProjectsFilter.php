@@ -4,8 +4,9 @@ namespace app\models\forms;
 
 use app\models\Project;
 use app\models\ProjectAttribute;
+use yii\base\Model;
 
-class ProjectsFilter extends \yii\base\Model {
+class ProjectsFilter extends Model {
     public $typeId;
 
     public function rules() {

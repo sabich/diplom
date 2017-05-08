@@ -1,4 +1,8 @@
-<form id="filtr" class="form-horizontal" action="#" method="POST" role="form">
+<?php
+use yii\helpers\Url;
+?>
+<form id="projectsFilter" class="form-horizontal" action="<?=Url::to(['site/project-filter']) ?>" method="POST" role="form">
+    <input type="hidden" name="_csrf" value="<?= \Yii::$app->request->csrfToken ?>" />
     <div class="list-group panel">
         <a href="#flouts" class="btn btn-block" data-toggle="collapse"> Этажность <span
                 class="caret"></span></a>
