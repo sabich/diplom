@@ -16,13 +16,13 @@ use yii\helpers\Url;
             <form id="orderForm" action="<?= Url::to(['site/order']) ?>" method="POST" role="form">
                 <input type="hidden" name="_csrf" value="<?= \Yii::$app->request->csrfToken ?>" />
                 <div class="col-md-3">
-                    <input type="text" name="OrderForm[name]" placeholder="Введите Ваше имя">
+                    <input type="text" name="OrderForm[name]" placeholder="Введите Ваше имя" required>
                 </div>
                 <div class="col-md-3">
-                    <input type="tel" name="OrderForm[phone]" placeholder="Введите телефон">
+                    <input type="tel" name="OrderForm[phone]" placeholder="Введите телефон" required>
                 </div>
                 <div class="col-md-3">
-                    <input type="text" name="OrderForm[city]" id="city" list="city_list" placeholder="Город">
+                    <input type="text" name="OrderForm[city]" id="city" list="city_list" placeholder="Город" required>
                     <datalist name="city_list" id="city_list">
                         <option value="Астана"></option>
                         <option value="Алмата"></option>
@@ -49,7 +49,7 @@ use yii\helpers\Url;
                     </datalist>
                 </div>
                 <div class="col-md-3">
-                    <input type="text" name="OrderForm[project]" list="project_list" placeholder="выберите проект">
+                    <input type="text" name="OrderForm[project]" list="project_list" placeholder="выберите проект" required>
                     <datalist name="project" id="project_list">
                         <option value="Индивидуальное жилье"></option>
                         <option value="Жилой комплекс"></option>
