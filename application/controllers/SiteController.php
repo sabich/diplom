@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\forms\CallbackForm;
 use app\models\forms\OrderForm;
+use app\models\forms\ProjectsFilter;
 
 class SiteController extends \app\base\FrontController
 {
@@ -38,6 +39,21 @@ class SiteController extends \app\base\FrontController
             $form->load(\Yii::$app->request->post());
 
             if ($form->run()) {
+                \Yii::$app->session->setFlash('orderSuccess', true);
+            } else {
+                \Yii::$app->session->setFlash('orderErrors', $form->errors);
+            }
+        }
+
+        return $this->goBack();
+    }
+
+    public function actionProjectFilter() {
+        if (\Yii::$app->request->isPost) {
+            $form = new ProjectsFilter();
+            $form->load(\Yii::$app->request->post());
+
+            if ($form->Criteria) {
                 \Yii::$app->session->setFlash('orderSuccess', true);
             } else {
                 \Yii::$app->session->setFlash('orderErrors', $form->errors);

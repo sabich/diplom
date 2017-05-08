@@ -11,19 +11,19 @@ class FrontController extends \app\base\Controller {
                     'items' => [
                         [
                             'label' => 'Индивидуальное жилье',
-                            'url' => ['catalog/index', 'typeId'=>'1'],
+                            'url' => ['catalog/projects', 'typeId'=>'1'],
                         ],
                         [
                             'label' => 'Жилые комплексы',
-                            'url' => ['catalog/index', 'typeId'=>'2'],
+                            'url' => ['catalog/projects', 'typeId'=>'2'],
                         ],
                         [
                             'label' => 'Промышленные объекты',
-                            'url' => ['catalog/index', 'typeId'=>'3'],
+                            'url' => ['catalog/projects', 'typeId'=>'3'],
                         ],
                         [
                             'label' => 'Развлекательные комплексы',
-                            'url' => ['catalog/index', 'typeId'=>'4'],
+                            'url' => ['catalog/projects', 'typeId'=>'4'],
                         ]
                     ]
                 ],
@@ -35,19 +35,19 @@ class FrontController extends \app\base\Controller {
                     'items' => [
                         [
                             'label' => 'Индивидуальное жилье',
-                            'url' => ['design/index', 'typeId'=>'1'],
+                            'url' => ['catalog/designs', 'typeId'=>'1'],
                         ],
                         [
                             'label' => 'Жилые комплексы',
-                            'url' => ['design/index', 'typeId'=>'2'],
+                            'url' => ['catalog/designs', 'typeId'=>'2'],
                         ],
                         [
                             'label' => 'Промышленные объекты',
-                            'url' => ['design/index', 'typeId'=>'3'],
+                            'url' => ['catalog/designs', 'typeId'=>'3'],
                         ],
                         [
                             'label' => 'Развлекательные комплексы',
-                            'url' => ['design/index', 'typeId'=>'4'],
+                            'url' => ['catalog/designs', 'typeId'=>'4'],
                         ]
                     ]
                 ],

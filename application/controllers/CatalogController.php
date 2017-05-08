@@ -2,27 +2,43 @@
 
 namespace app\controllers;
 
+use app\base\FrontController;
 use app\models\Project;
 use app\models\ProjectType;
-use yii\base\Exception;
+use app\models\Design;
+use app\models\DesignType;
 use yii\data\ActiveDataProvider;
-use yii\helpers\Url;
+use yii\db\Expression;
 use yii\web\NotFoundHttpException;
 
-class CatalogController extends \app\base\FrontController {
+/**
+ * Class CatalogController
+ * @package app\controllers
+ */
+class CatalogController extends FrontController {
+    /**
+     * @var string
+     */
     public $layout = 'catalog';
 
-    public function actionIndex($typeId = null) {
+    /**
+     * @param null $typeId
+     * @return string
+     * @throws NotFoundHttpException
+     */
+    public function actionProjects($typeId = null) {
         if ($typeId) {
             if ($type = ProjectType::findOne($typeId)) {
                 $provider = new ActiveDataProvider([
-                    'query' => Project::find()->where(['typeId' => $typeId]),
+                    'query' => Project::find()
+                        ->where(['typeId' => $typeId])
+                        ->orderBy(['id'=>SORT_DESC]),
                     'pagination' => [
                         'pageSize' => 9
                     ]
                 ]);
 
-                return $this->render('index', [
+                return $this->render('projects', [
                     'projectsProvider' => $provider,
                     'projectType' => $type
                 ]);
@@ -38,12 +54,19 @@ class CatalogController extends \app\base\FrontController {
             ]
         ]);
 
-        return $this->render('index', [
+        return $this->render('projects', [
             'projectsProvider' => $provider,
             'projectType' => null
         ]);
     }
 
+    /**
+     * @param $id
+     * @return string
+     * @throws NotFoundHttpException
+     *
+     * @var \app\models\Project $typeId
+     */
     public function actionProject($id) {
         $project = Project::findOne($id);
 
@@ -54,9 +77,48 @@ class CatalogController extends \app\base\FrontController {
             'similarProjects' => Project::find()
                 ->where(['typeId' => $project->typeId])
                 ->andWhere(['!=', 'id', $id])
-                ->orderBy(new \yii\db\Expression('RAND()'))
+                ->orderBy(new Expression('RAND()'))
                 ->limit(3)
                 ->all()
+        ]);
+    }
+
+    /**
+     * @param null $typeId
+     * @return string
+     * @throws NotFoundHttpException
+     */
+    public function actionDesigns($typeId = null) {
+        if ($typeId) {
+            if ($type = DesignType::findOne($typeId)) {
+                $provider = new ActiveDataProvider([
+                    'query' => Design::find()
+                        ->where(['typeId' => $typeId])
+                        ->orderBy(['id'=>SORT_DESC]),
+                    'pagination' => [
+                        'pageSize' => 6
+                    ]
+                ]);
+
+                return $this->render('designs', [
+                    'designProvider' => $provider,
+                    'designType' => $type,
+                ]);
+            }
+
+            throw new NotFoundHttpException();
+        }
+
+        $provider = new ActiveDataProvider([
+            'query' => Design::find(),
+            'pagination' => [
+                'pageSize' => 6
+            ]
+        ]);
+
+        return $this->render('designs', [
+            'designProvider' => $provider,
+            'designType' => null
         ]);
     }
 }

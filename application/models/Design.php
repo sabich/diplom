@@ -32,7 +32,7 @@ class Design extends ActiveRecord {
 
     // ProjectType relation
     public function getType() {
-        return $this->hasOne(ProjectType::className(), ['id' => 'typeId']);
+        return $this->hasOne(DesignType::className(), ['id' => 'typeId']);
     }
 
 }
