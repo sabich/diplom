@@ -2,7 +2,9 @@
 
 namespace app\models;
 
-class DesignType extends \app\base\Activerecord {
+use \app\base\ActiveRecord;
+
+class DesignType extends Activerecord {
     // ActiveRecord
     public $timestampBehavior = false;
 

@@ -133,10 +133,10 @@ $this->title = 'ARS Holding';
                 <div class="dropdown">
                     <div class="item-menu dropdown-toggle" type="button" data-toggle="dropdown"><span>Проектирование</span></div>
                     <ul class="dropdown-menu">
-                        <li><a href="<?= Url::toRoute(['catalog/index', 'typeId' => '1']) ?>">Индивидуальное жилье</a></li>
-                        <li><a href="<?= Url::toRoute(['catalog/index', 'typeId' => '2']) ?>">Жилые комплексы</a></li>
-                        <li><a href="<?= Url::toRoute(['catalog/index', 'typeId' => '3']) ?>">Промышленные объекты</a></li>
-                        <li><a href="<?= Url::toRoute(['catalog/index', 'typeId' => '4']) ?>">Развлекательные комплексы</a></li>
+                        <li><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '1']) ?>">Индивидуальное жилье</a></li>
+                        <li><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '2']) ?>">Жилые комплексы</a></li>
+                        <li><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '3']) ?>">Промышленные объекты</a></li>
+                        <li><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '4']) ?>">Развлекательные комплексы</a></li>
                     </ul>
                 </div>
             </li>
