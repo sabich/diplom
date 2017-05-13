@@ -6,6 +6,7 @@ $(document).ready(function(){
         owl.owlCarousel({
             items:1,
             loop:true, //Зацикливаем слайдер
+            autoplayHoverPause:true, //Остановка при наведении
             autoplay:true, //Автозапуск слайдера
             smartSpeed:2000, //Время движения слайда
             autoplayTimeout:5000, //Время смены слайда
