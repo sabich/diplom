@@ -42,7 +42,7 @@ $(document).ready(function(){
             // [milliseconds]
             // Speed of the fade in animation after items have been setup
 
-            loop: true,
+            loop: 2,
             // [true|false]
             // Loop around when the start or end is reached
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
             // [true|false]
             // If true, autoplay advancement will pause when Flipster is hovered
 
-            style: 'coverflow',
+            style: 'infinite-carousel',
             // [coverflow|carousel|flat|...]
             // Adds a class (e.g. flipster--coverflow) to the flipster element to switch between display styles
             // Create your own theme in CSS and use this setting to have Flipster add the custom class
@@ -84,7 +84,7 @@ $(document).ready(function(){
             // If not false, Flipster will build an unordered list of the items
             // Values true or 'before' will insert the navigation before the items, 'after' will append the navigation after the items
 
-            buttons: false,
+            buttons: true,
             // [true|false|'custom']
             // If true, Flipster will insert Previous / Next buttons with SVG arrows
             // If 'custom', Flipster will not insert the arrows and will instead use the values of `buttonPrev` and `buttonNext`
