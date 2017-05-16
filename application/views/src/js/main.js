@@ -103,4 +103,34 @@ $(document).ready(function(){
             // Arguments received: [currentItem, previousItem]
         });
     }
+    $('#btnModal').click(function () {
+
+        var wheel = new wheelnav("wheelDiv");
+        wheel.wheelRadius = 260;
+        wheel.centerX = 260;
+        wheel.centerY = 180;
+        // wheel.navAngle = 45;
+        // wheel.wheelRadius = 150;
+        wheel.sliceHoverAttr = { stroke: '#c0221f', 'stroke-width': 4 };
+        wheel.lineHoverAttr = { stroke: '#c0221f', 'stroke-width': 3 };
+        wheel.titleHoverAttr = { fill: '#c0221f', stroke: 'none' };
+        wheel.sliceSelectedAttr = { stroke: '#e5dacc', 'stroke-width': 4 };
+        wheel.lineSelectedAttr = { stroke: '#e5dacc', 'stroke-width': 4 };
+        wheel.titleSelectedAttr = { fill: '#c0221f' };
+        wheel.animatetime = 1000;
+        wheel.animateeffect = 'easeInOut';
+        wheel.colors = colorpalette.fractallove;
+        wheel.sliceTransformFunction = sliceTransform().RotateTitleTransform;
+        wheel.titleHeight=100;
+        wheel.titleWidth=100;
+        wheel.initWheel(["Индивидуальное\nжилье", "Жилые\nкомплексы", "Промышленные\nобъекты", "Развлекательные\nкомплексы"]);
+
+        wheel.navItems[0].navigateFunction = function () { $('#tabNav a[href="#tabHome"]').tab("show") };
+        wheel.navItems[1].navigateFunction = function () { $('#tabNav a[href="#tabKom"]').tab("show") };
+        wheel.navItems[2].navigateFunction = function () { $('#tabNav a[href="#tabProm"]').tab("show") };
+        wheel.navItems[3].navigateFunction = function () { $('#tabNav a[href="#tabRaz"]').tab("show") };
+        wheel.createWheel();
+
+        $('.bd-modal-lg').modal();
+    });
 });

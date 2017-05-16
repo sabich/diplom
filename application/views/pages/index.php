@@ -129,26 +129,82 @@ $this->title = 'ARS Holding';
 <section class="container-fluid">
     <div id="main_menu" class="row">
         <ul class="nav">
-            <li id="m_projects" class="col-md-3 no-padding">
-                <div class="dropdown">
-                    <div class="item-menu dropdown-toggle" type="button" data-toggle="dropdown"><span>Проектирование</span></div>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '1']) ?>">Индивидуальное жилье</a></li>
-                        <li><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '2']) ?>">Жилые комплексы</a></li>
-                        <li><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '3']) ?>">Промышленные объекты</a></li>
-                        <li><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '4']) ?>">Развлекательные комплексы</a></li>
-                    </ul>
-                </div>
-            </li>
+            <a href="#" id="btnModal" data-target=".bd-modal-lg">
+                <li id="m_projects" class="col-md-3 no-padding">
+                    <div class="item-menu"><span>Проектирование</span></div>
+                </li>
+            </a>
+            <a href="#">
             <li id="m_building" class="col-md-3 no-padding">
-                    <div class="item-menu"><span>Строительство</span></div>
+                <div class="item-menu"><span>Строительство</span></div>
             </li>
-            <a href="#"><li id="m_design" class="col-md-3 no-padding"><div class="item-menu"><span>Дизайн</span></div></li></a>
+            </a>
+            <a href="#">
+                <li id="m_design" class="col-md-3 no-padding"><div class="item-menu"><span>Дизайн</span></div></li></a>
             <a href="<?= Url::to('site/service') ?>">
                 <li id="m_services" class="col-md-3 no-padding">
                     <div class="item-menu"><span>Услуги</span></div>
                 </li>
             </a>
         </ul>
+    </div>
+</section>
+<section>
+    <div class="modal fade bd-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Проектирование</h4>
+                </div>
+                <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-6"><div id="wheelDiv"></div></div>
+
+                    <div class="col-md-6">
+                        <div class="tab-content">
+                            <ul class="nav nav-tabs" id="tabNav" hidden="hidden" >
+                                <li class=""><a href="#tabHome" data-toggle="tab">Индивидуальное жилье</a></li>
+                                <li class=""><a href="#tabKom" data-toggle="tab">Жилые комплексы</a></li>
+                                <li class=""><a href="#tabProm" data-toggle="tab">Промышленные объекты</a></li>
+                                <li class=""><a href="#tabRaz" data-toggle="tab">Развлекательные комплексы</a></li>
+                            </ul>
+
+                            <div class="tab-pane fade in active" id="tabHome">
+                                <h2 class="featurette-heading">
+                                    Индивидуальное жилье
+                                </h2>
+                                <h3 class="text-muted">Скромное загородное шале или фешенебельный городской коттедж - любой жилой объект, доверенный инженерам ARS Holding, будет детально проработан согласно строгим нормативам строительства и с учетом идей и потребностей заказчика.</h3>
+                                <p class="lead">
+                                    <a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '1']) ?>" class="btn btn-lg btn-default btn-link">Перейти в каталог проектов</a></p>
+                            </div>
+                            <div class="tab-pane fade" id="tabKom">
+                                <h2 class="featurette-heading">
+                                    Жилые комплексы
+                                </h2>
+                                <h3 class="text-muted">Проектная деятельность холдинга в сфере строительства многоквартирного жилья базируется на строжайшем соблюдении нормативов и применении новых для Казахстана антисейсмических технологий.</h3>
+                                <p class="lead"><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '2']) ?>" class="btn btn-lg btn-default btn-link">Перейти в каталог проектов</a></p>
+                            </div>
+                            <div class="tab-pane fade" id="tabProm">
+                                <h2 class="featurette-heading">
+                                    Промышленные объекты
+                                </h2>
+                                <h3 class="text-muted">Промышленное проектирование включает в себя работу над различными по масштабам и функциональному назначению проектами – от небольших заправочных станций до заводов и аэропортов.</h3>
+                                <p class="lead"><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '3']) ?>" class="btn btn-lg btn-default btn-link">Перейти в каталог проектов</a></p>
+                            </div>
+                            <div class="tab-pane fade" id="tabRaz">
+                                <h2 class="featurette-heading">
+                                    Развлекательные комплексы
+                                    <h3 class="text-muted">Проектирование торговых и развлекательных комплексов требует не только профессионального инженерного просчета, но и проработки таких важных компонентов, как архитектурная уникальность здания, уют и функциональность внутренних помещений, безопасность объекта и удобство его расположения.</h3>
+                                </h2>
+                                <p class="lead"><a href="<?= Url::toRoute(['catalog/projects', 'typeId' => '4']) ?>" class="btn btn-lg btn-default btn-link">Перейти в каталог проектов</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

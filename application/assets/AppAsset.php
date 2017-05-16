@@ -31,6 +31,9 @@ class AppAsset extends AssetBundle
         'js/jquery.flipster.min.js',
         'js/owl.carousel.min.js',
         'js/main.js',
+        'js/wheelnav/raphael.icons.min.js',
+        'js/wheelnav/raphael.min.js',
+        'js/wheelnav/wheelnav.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
