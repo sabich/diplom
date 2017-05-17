@@ -126,28 +126,29 @@ $this->title = 'ARS Holding';
     </div>
 </section>
 <!-- MAIN MENU -->
-<section class="container-fluid">
-    <div id="main_menu" class="row">
-        <ul class="nav">
-            <a href="#" id="btnModal" data-target=".bd-modal-lg">
-                <li id="m_projects" class="col-md-3 no-padding">
-                    <div class="item-menu"><span>Проектирование</span></div>
-                </li>
+<section id="main_menu" class="container-fluid">
+    <ul class="nav">
+        <li class="col-md-3">
+            <a href="#" class="no-padding" id="btnModal" data-target=".bd-modal-lg">
+                <div id="m_projects" class="item_menu"><h2>Проектирование</h2></div>
             </a>
-            <a href="#">
-            <li id="m_building" class="col-md-3 no-padding">
-                <div class="item-menu"><span>Строительство</span></div>
-            </li>
+        </li>
+        <li class="col-md-3">
+            <a href="#" class="no-padding">
+                <div id="m_building" class="item_menu"><h2>Строительство</h2></div>
             </a>
-            <a href="#">
-                <li id="m_design" class="col-md-3 no-padding"><div class="item-menu"><span>Дизайн</span></div></li></a>
-            <a href="<?= Url::to('site/service') ?>">
-                <li id="m_services" class="col-md-3 no-padding">
-                    <div class="item-menu"><span>Услуги</span></div>
-                </li>
+        </li>
+        <li class="col-md-3">
+            <a href="<?= Url::to(['catalog/designs', 'typeId' => 1]) ?>" class="no-padding">
+                <div id="m_design" class="item_menu"><h2>Дизайн</h2></div>
             </a>
-        </ul>
-    </div>
+        </li>
+        <li class="col-md-3">
+            <a class="no-padding" href="<?= Url::to('site/service') ?>">
+                <div id="m_services" class="item_menu"><h2>Услуги</h2></div>
+            </a>
+        </li>
+    </ul>
 </section>
 <section>
     <div class="modal fade bd-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
