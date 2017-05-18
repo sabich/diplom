@@ -27,6 +27,7 @@ class AdminProjectController extends \app\base\AdminController {
         if (\Yii::$app->request->isPost) {
             $form->load(\Yii::$app->request->post());
             $form->cover = UploadedFile::getInstance($form, 'cover');
+            $form->images = UploadedFile::getInstances($form, 'images');
 
             try {
                 if ($form->run()) {

@@ -40,7 +40,7 @@ $this->params['breadcrumbs'] = [
                 ]
             ]) ?>
 
-            <?php if ($model->project->coverId) { ?>
+            <?php if (isset($model->project->coverId)) { ?>
                 <div class="form-group">
                     <img src="<?= $model->project->coverUrl ?>" />
                 </div>
