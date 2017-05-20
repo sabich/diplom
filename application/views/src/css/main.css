@@ -196,7 +196,8 @@ nav {
   z-index: -1; }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: -25px; }
+  padding: 10px 0px;
+  background-color: rgba(192, 34, 31, 0.4); }
 
 .owl-theme .owl-dots .owl-dot span {
   width: 30px;
