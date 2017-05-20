@@ -75,3 +75,41 @@ main {
     font-weight: normal;
     font-size: 14px;
     height: 65px; }
+  #OrderProjectModal {
+    color: #c0221f;
+    text-align: center;
+    font-family: 'OpenSans';
+    font-size: 18px;
+    font-weight: normal; }
+  #OrderProjectModal h4 {
+    color: #000;
+    text-transform: uppercase; }
+  #OrderProjectModal .modal-content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e5dacc; }
+  #OrderProjectModal .modal-header .close {
+    margin-top: -2px;
+    color: #c0221f;
+    opacity: .8; }
+  #OrderProjectModal .input-group span.input-group-addon {
+    color: #c0221f;
+    background-color: #c0af9b;
+    font-size: 25px;
+    height: 50px; }
+  #OrderProjectModal .input-group .form-control {
+    color: #000;
+    background-color: #c0af9b;
+    height: 50px; }
+  #OrderProjectModal .input-group .form-control .bootstrap-select button {
+    border: 1px solid #000;
+    border-radius: 0;
+    background-color: #c0af9b; }
+  #OrderProjectModal .btn-order {
+    margin: 20px 0;
+    padding: 5px 20px;
+    border-width: 0;
+    background-color: transparent; }
+  #OrderProjectModal .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 70px; }

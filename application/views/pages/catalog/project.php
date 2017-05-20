@@ -54,6 +54,30 @@ $this->params['breadcrumbs'] = [
                     <?php } ?>
                 </tbody>
             </table>
+            <a href="#OrderProjectModal" class="btn-block btn-order text-center" data-toggle="modal">Заказать этот проект</a>
+        </div>
+    </div>
+    <div class="modal fade" id="OrderProjectModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Заказ проекта <?= $project->article ?></h4>
+                </div>
+                <div class="modal-body">
+                    <form id="callbackForm" action="<?= Url::to(['catalog/order-project']) ?>" method="POST" role="form">
+                        <input type="hidden" name="_csrf" value="<?= \Yii::$app->request->csrfToken ?>" />
+                        <input type="hidden" name="OrderProjectForm[project]" class="form-control" value="<?= $project->article ?>" aria-describedby="OrderProjectFormProject" required>
+                        <label for="callbackFormName">Ваше имя</label>
+                            <input type="text" name="OrderProjectForm[name]" class="form-control" placeholder="Введите Ваше имя" aria-describedby="OrderProjectFormName" required>
+                        <label for="callbackFormPhone">Ваш e-mail</label>
+                            <input type="email" name="OrderProjectForm[email]" class="form-control" placeholder="Введите Ваш email" aria-describedby="OrderProjectFormEmail" required>
+                        <label for="callbackFormPhone">Ваш телефон</label>
+                            <input type="tel" name="OrderProjectForm[phone]" class="form-control" placeholder="+7 (XXX) XXX-XX-XX" aria-describedby="OrderProjectFormPhone" required>
+                        <button class="btn-order" type="submit">Заказать</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </section>

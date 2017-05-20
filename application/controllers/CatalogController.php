@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\base\FrontController;
+use app\models\forms\OrderProjectForm;
 use app\models\Project;
 use app\models\ProjectType;
 use app\models\Design;
@@ -120,5 +121,21 @@ class CatalogController extends FrontController {
             'designProvider' => $provider,
             'designType' => null
         ]);
+    }
+
+    public function actionOrderProject() {
+        
+        if (\Yii::$app->request->isPost) {
+            $form = new OrderProjectForm();
+            $form->load(\Yii::$app->request->post());
+
+            if ($form->run()) {
+                \Yii::$app->session->setFlash('orderSuccess', true);
+            } else {
+                \Yii::$app->session->setFlash('orderErrors', $form->errors);
+            }
+        }
+
+        return $this->goBack();
     }
 }
