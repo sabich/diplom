@@ -129,7 +129,7 @@ $this->title = 'ARS Holding';
 <section id="main_menu" class="container-fluid">
     <ul class="nav">
         <li class="col-md-3">
-            <a href="<?= Url::to('catalog/projects') ?>">
+            <a href="<?= Url::to('catalog/projects') ?>" class="no-padding">
                 <div id="m_projects" class="item_menu"><h2>Проектирование</h2></div>
             </a>
         </li>
