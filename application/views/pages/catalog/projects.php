@@ -8,6 +8,14 @@ use yii\bootstrap\Nav;
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
 
+//if(isset($projectType)){
+//    $this->title = 'Проекты|'.$projectType->name;
+//} else {
+//    $this->title = 'Проекты';
+//}
+
+(isset($projectType))?($this->title='Проекты|'.$projectType->name):($this->title = 'Проекты');
+
 $this->params['breadcrumbs'] = [];
 if ($projectType) {
     $this->params['breadcrumbs'][] = ['label' => 'Проекты', 'url' => ['catalog/projects']];

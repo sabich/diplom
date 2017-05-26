@@ -3,7 +3,10 @@ use yii\widgets\LinkPager;
 use yii\helpers\Url;
 use yii\helpers\FileHelper;
 
+/* @var $this yii\web\View */
+/* @var $project app\models\Project */
 
+$this->title = 'Проекты|'.$project->type->name.'|'.$project->article;
 $this->params['breadcrumbs'] = [
     ['label' => $project->type->name, 'url' => ['catalog/projects', 'typeId'=>$project->type->id]],
     ['label' => 'Проект '. $project->article ],
@@ -54,7 +57,7 @@ $this->params['breadcrumbs'] = [
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="#OrderProjectModal" class="btn-block btn-order text-center" data-toggle="modal">Заказать этот проект</a>
+            <a href="#OrderProjectModal" class="btn-block btn-order text-center" data-toggle="modal">Заказать проект</a>
         </div>
     </div>
     <div class="modal fade" id="OrderProjectModal">
