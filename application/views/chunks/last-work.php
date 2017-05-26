@@ -10,7 +10,7 @@ use yii\helpers\Url;
 
 <!-- LAST WORKS -->
 <section id="last_works" class="container-fluid">
-    <div class="row">
+    <div class="row bg">
         <div class="col-md-12 text-center">
             <h2 class="title_main">Последние проекты</h2>
             <p class="desc_main">Индивидуальный подход и инновационные технологии - главные причины наших успехов</p>

@@ -322,6 +322,10 @@ main {
 #last_works {
   margin: 50px 0;
   opacity: .8; }
+#last_works .bg {
+  background-image: url("../images/assets/overlay.png");
+  margin-bottom: 50px;
+}
   /*#last_works .flip-items img {*/
     /*-webkit-box-shadow: 0px 0px 24px 11px rgba(0, 0, 0, 0.37);*/
     /*-moz-box-shadow: 0px 0px 24px 11px rgba(0, 0, 0, 0.37);*/
