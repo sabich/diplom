@@ -47,7 +47,7 @@ use yii\helpers\Url;
                             <option value="ru">ru</option>
                             <option value="en">en</option>
                         </select>
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/ARSHOLDING/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
                     </div>
                     <div id="callback" class="col-md-2">
